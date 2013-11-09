@@ -28,9 +28,9 @@
         SOSMasterViewController *controller = (SOSMasterViewController *)masterNavigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     } else {
-        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        SOSMasterViewController *controller = (SOSMasterViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
+//        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//        SOSMasterViewController *controller = (SOSMasterViewController *)navigationController.topViewController;
+//        controller.managedObjectContext = self.managedObjectContext;
     }
     return YES;
 }
