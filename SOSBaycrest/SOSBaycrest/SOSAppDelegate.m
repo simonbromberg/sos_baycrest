@@ -32,6 +32,7 @@
 //        SOSMasterViewController *controller = (SOSMasterViewController *)navigationController.topViewController;
 //        controller.managedObjectContext = self.managedObjectContext;
     }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 							

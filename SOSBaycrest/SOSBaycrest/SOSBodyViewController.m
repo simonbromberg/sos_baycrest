@@ -7,6 +7,7 @@
 //
 
 #import "SOSBodyViewController.h"
+#import "SOSDetailViewController.h"
 
 @interface SOSBodyViewController ()
 @property (nonatomic,strong) NSArray* labels;
@@ -43,7 +44,7 @@ UIColor* rgba(float r,float g, float b, float a) {
 //    self.navigationController.navigationBar.backgroundColor = rgba(0, 200, 230,1.0);
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
     self.labels = [NSArray arrayWithObjects:@"Neurological System",@"Sensory System", @"Respiratory System", @"Cardiovascular System", @"Intergumentary System", @"Gastrointestinal System", @"Genitourinary System", @"Musculoskeletal System", @"Function", nil];
     
@@ -85,7 +86,8 @@ UIColor* rgba(float r,float g, float b, float a) {
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    SOSDetailViewController* detailVC =  (SOSDetailViewController*)segue.destinationViewController;
+    detailVC.title = [self.labels objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
 }
 
 
