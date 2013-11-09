@@ -60,7 +60,7 @@ UIColor* rgba(float r,float g, float b, float a) {
     cell.label.text = [self.labels objectAtIndex: indexPath.row];
     cell.label.textColor = [UIColor whiteColor];
     cell.backgroundColor = [self.colors objectAtIndex:indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryView = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"navarrow"]];
     return cell;
 }
 
