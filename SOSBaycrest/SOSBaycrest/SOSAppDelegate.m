@@ -160,8 +160,26 @@
 }
 
 -(NSDictionary*) checklistDict {
-//    NSDictionary* info = @{@"Defs": @[@{@"title"]}
-    return nil;
+//    NSDictionary* info = @{@"Defs": @[@{@"title":@"Neurological System",
+//                                        @"entries":@[@{@"label":@"Tired?",
+//                                                       @"imageResource":@"bleh.png"
+//                                                       }]}]};
+    NSDictionary* info = @{@"Defs": @[@{@"title":@"Neurological System",
+                                        @"entries":@[@{@"label":@"Tired?",
+                                                       @"imageResource":@"bleh.png"
+                                                       },
+                                                     @{@"label":@"Faint?",
+                                                       @"imageResource":@"bleh.png"
+                                                       },
+                                                     @{@"label":@"Sad?",
+                                                       @"imageResource":@"bleh.png"
+                                                       }
+                                                     ]}]};
+    return info;
+}
+
++(SOSAppDelegate*) sharedInstance {
+    return (SOSAppDelegate*) [[UIApplication sharedApplication] delegate];
 }
 
 @end

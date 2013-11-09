@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SOSAppDelegate.h"
+#import "SOSChecklistTableViewCell.h"
 
 @interface SOSDetailViewController : UITableViewController
 

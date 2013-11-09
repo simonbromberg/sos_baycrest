@@ -49,15 +49,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    
+//    return 4;
+    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
+    NSLog(@"%d entries",[ci[@"Defs"][0][@"entries"] count]);
+    return [ci[@"Defs"][0][@"entries"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    SOSChecklistTableViewCell *cell = (SOSChecklistTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+//    [cell pos]
+    NSLog(@"icon test %@",    [cell conditionPositiveButton]);
     
     // Configure the cell...
+    
+    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
+    
+//    ci = ci[@"entries"][0];
+    NSArray* entries = ci[@"Defs"][0][@"entries"];
+    
+    NSDictionary* entry = entries[[indexPath item]];
+    [[cell conditionLabel] setText:entry[@"label"]];
+    
+    
+    
     
     return cell;
 }

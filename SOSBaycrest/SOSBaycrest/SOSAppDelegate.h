@@ -19,4 +19,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
++(SOSAppDelegate*) sharedInstance;
+-(NSDictionary*) checklistDict ;
+
 @end
