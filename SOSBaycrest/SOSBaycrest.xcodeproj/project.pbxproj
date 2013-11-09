@@ -10,6 +10,10 @@
 		24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE2995182ED2D9005725B2 /* Outline-body.png */; };
 		24AE2999182EDA31005725B2 /* SOSBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AE2998182EDA31005725B2 /* SOSBodyViewController.m */; };
 		24AE299C182EE1DC005725B2 /* SOSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */; };
+		24AE299F182EEECF005725B2 /* navarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE299D182EEECF005725B2 /* navarrow.png */; };
+		24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE299E182EEECF005725B2 /* navarrow@2x.png */; };
+		24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A1182EEED9005725B2 /* baycrestlogo.png */; };
+		24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */; };
 		2E54E7D6182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
 		2E54E7D8182EB27700B94C7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */; };
 		2E54E7DA182EB27700B94C7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D9182EB27700B94C7C /* UIKit.framework */; };
@@ -47,6 +51,10 @@
 		24AE2998182EDA31005725B2 /* SOSBodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSBodyViewController.m; sourceTree = "<group>"; };
 		24AE299A182EE1DC005725B2 /* SOSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSDetailViewController.h; sourceTree = "<group>"; };
 		24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSDetailViewController.m; sourceTree = "<group>"; };
+		24AE299D182EEECF005725B2 /* navarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navarrow.png; sourceTree = "<group>"; };
+		24AE299E182EEECF005725B2 /* navarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navarrow@2x.png"; sourceTree = "<group>"; };
+		24AE29A1182EEED9005725B2 /* baycrestlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baycrestlogo.png; sourceTree = "<group>"; };
+		24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baycrestlogo@2x.png"; sourceTree = "<group>"; };
 		2E54E7D2182EB27700B94C7C /* SOSBaycrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSBaycrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54E7D5182EB27700B94C7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +107,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24AE29A5182EEEE2005725B2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				24AE29A1182EEED9005725B2 /* baycrestlogo.png */,
+				24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */,
+				24AE299D182EEECF005725B2 /* navarrow.png */,
+				24AE299E182EEECF005725B2 /* navarrow@2x.png */,
+				24AE2995182ED2D9005725B2 /* Outline-body.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		2E54E7C9182EB27700B94C7C = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +158,13 @@
 				2E54E7E6182EB27700B94C7C /* SOSAppDelegate.h */,
 				2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */,
 				2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */,
-				24AE299A182EE1DC005725B2 /* SOSDetailViewController.h */,
-				24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */,
 				2E54E7EC182EB27700B94C7C /* Main_iPad.storyboard */,
 				2E54E7F2182EB27700B94C7C /* SOSMasterViewController.h */,
 				2E54E7F3182EB27700B94C7C /* SOSMasterViewController.m */,
 				24AE2997182EDA31005725B2 /* SOSBodyViewController.h */,
 				24AE2998182EDA31005725B2 /* SOSBodyViewController.m */,
+				24AE299A182EE1DC005725B2 /* SOSDetailViewController.h */,
+				24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */,
 				2E54E7F8182EB27700B94C7C /* Images.xcassets */,
 				2E54E7EF182EB27700B94C7C /* SOSBaycrest.xcdatamodeld */,
 				2E54E7DE182EB27700B94C7C /* Supporting Files */,
@@ -155,7 +175,7 @@
 		2E54E7DE182EB27700B94C7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				24AE2995182ED2D9005725B2 /* Outline-body.png */,
+				24AE29A5182EEEE2005725B2 /* Image */,
 				2E54E7DF182EB27700B94C7C /* SOSBaycrest-Info.plist */,
 				2E54E7E0182EB27700B94C7C /* InfoPlist.strings */,
 				2E54E7E3182EB27700B94C7C /* main.m */,
@@ -259,7 +279,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */,
 				24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */,
+				24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */,
+				24AE299F182EEECF005725B2 /* navarrow.png in Resources */,
+				24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */,
 				2E54E7EE182EB27700B94C7C /* Main_iPad.storyboard in Resources */,
 				2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */,
 				2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */,
