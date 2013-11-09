@@ -42,8 +42,9 @@ UIColor* rgba(float r,float g, float b, float a) {
     self.navigationController.navigationBar.barTintColor = rgba(0, 200, 230,1.0);
 //    self.navigationController.navigationBar.backgroundColor = rgba(0, 200, 230,1.0);
     self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.navigationController.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
     self.labels = [NSArray arrayWithObjects:@"Neurological System",@"Sensory System", @"Respiratory System", @"Cardiovascular System", @"Intergumentary System", @"Gastrointestinal System", @"Genitourinary System", @"Musculoskeletal System", @"Function", nil];
     
     self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(122,0,255),rgb(105,201,21),rgb(222,180,56),nil];
@@ -60,7 +61,14 @@ UIColor* rgba(float r,float g, float b, float a) {
     cell.label.text = [self.labels objectAtIndex: indexPath.row];
     cell.label.textColor = [UIColor whiteColor];
     cell.backgroundColor = [self.colors objectAtIndex:indexPath.row];
-    cell.accessoryView = [[UIImageView alloc ] initWithImage:[UIImage imageNamed:@"navarrow"]];
+    UIImage* image = [UIImage imageNamed:@"navarrow"];
+    
+    UIImageView* imageView =[[UIImageView alloc ] initWithImage:image];
+    [imageView setContentMode:UIViewContentModeScaleAspectFit];
+    UIView* containter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, image.size.width,image.size.height + 8)];
+    imageView.frame = CGRectMake(0, 14, imageView.frame.size.width, imageView.frame.size.height);
+    [containter addSubview:imageView];
+    cell.accessoryView = containter;
     return cell;
 }
 
