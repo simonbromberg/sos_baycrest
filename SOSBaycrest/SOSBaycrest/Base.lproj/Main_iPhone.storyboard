@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="97" id="Zlt-aH-fAy" customClass="ConditionCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="97" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zlt-aH-fAy" id="aeH-W0-7GD">
@@ -101,6 +101,9 @@
                                             <state key="normal" title="Button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="conditionPositiveAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="lRs-7N-RO0"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
                                             <rect key="frame" x="137" y="59" width="46" height="30"/>
@@ -111,6 +114,12 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conditionIcon" destination="aeH-W0-7GD" id="xFh-o9-wx8"/>
+                                    <outlet property="conditionLabel" destination="JT0-J8-aja" id="nYF-Ih-j6I"/>
+                                    <outlet property="conditionNegativeButton" destination="aGd-LY-nmi" id="iqf-sf-PGX"/>
+                                    <outlet property="conditionPositiveButton" destination="aWS-Dm-LhE" id="WmD-lv-odr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

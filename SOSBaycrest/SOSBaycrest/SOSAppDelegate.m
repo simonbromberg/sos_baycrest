@@ -158,4 +158,9 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+-(NSDictionary*) checklistDict {
+//    NSDictionary* info = @{@"Defs": @[@{@"title"]}
+    return nil;
+}
+
 @end
