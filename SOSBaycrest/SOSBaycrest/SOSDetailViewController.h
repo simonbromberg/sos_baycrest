@@ -11,3 +11,13 @@
 @interface SOSDetailViewController : UITableViewController
 
 @end
+
+@interface ConditionCell : UITableViewCell
+@property (nonatomic,weak) IBOutlet UILabel* titleLabel;
+@property (nonatomic,weak) IBOutlet UIImageView* leftImage;
+@property (nonatomic,weak) IBOutlet UIButton* yesButton;
+@property (nonatomic,weak) IBOutlet UIButton* noButton;
+
+
+
+@end
