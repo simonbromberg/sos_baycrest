@@ -1,5 +1,5 @@
 //
-//  SOSDetailViewController.h
+//  SOSBodyViewController.h
 //  SOSBaycrest
 //
 //  Created by Simon Bromberg on 11/9/2013.
@@ -7,7 +7,5 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SOSDetailViewController : UITableViewController
-
+@interface SOSBodyViewController : UITableViewController
 @end
