@@ -9,7 +9,7 @@
 #import "SOSBodyViewController.h"
 
 @interface SOSBodyViewController ()
-
+@property (nonatomic,strong) NSArray* labels;
 @end
 
 @implementation SOSBodyViewController
@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.labels = [NSArray arrayWithObjects:@"Neurological",@"Sensory", @"Respiratory", @"Cardiovascular", @"Intergumentary", @"Gastrointestinal", @"Genitourinary", @"Musculoskeletal", @"Function", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +36,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [self.labels objectAtIndex: indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    return cell;
+}
+
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 9;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+}
+
+
+
 @end
+

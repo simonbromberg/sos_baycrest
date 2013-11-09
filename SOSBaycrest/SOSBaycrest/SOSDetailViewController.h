@@ -2,15 +2,12 @@
 //  SOSDetailViewController.h
 //  SOSBaycrest
 //
-//  Created by Michael Matan on 2013-11-09.
+//  Created by Simon Bromberg on 11/9/2013.
 //  Copyright (c) 2013 Michael Matan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SOSDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface SOSDetailViewController : UITableViewController
 
-@property (strong, nonatomic) id detailItem;
-
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

@@ -7,7 +7,5 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SOSBodyViewController : UIViewController
-
+@interface SOSBodyViewController : UITableViewController
 @end
