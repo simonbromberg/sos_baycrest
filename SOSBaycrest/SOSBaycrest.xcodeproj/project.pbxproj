@@ -28,6 +28,7 @@
 		2E54E803182EB27700B94C7C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7DB182EB27700B94C7C /* CoreData.framework */; };
 		2E54E80B182EB27700B94C7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E809182EB27700B94C7C /* InfoPlist.strings */; };
 		2E54E80D182EB27700B94C7C /* SOSBaycrestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E80C182EB27700B94C7C /* SOSBaycrestTests.m */; };
+		2E54E87A182EEAA400B94C7C /* SOSChecklistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		2E54E808182EB27700B94C7C /* SOSBaycrestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SOSBaycrestTests-Info.plist"; sourceTree = "<group>"; };
 		2E54E80A182EB27700B94C7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2E54E80C182EB27700B94C7C /* SOSBaycrestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOSBaycrestTests.m; sourceTree = "<group>"; };
+		2E54E878182EEAA400B94C7C /* SOSChecklistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSChecklistTableViewCell.h; sourceTree = "<group>"; };
+		2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSChecklistTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 		2E54E7DD182EB27700B94C7C /* SOSBaycrest */ = {
 			isa = PBXGroup;
 			children = (
+				2E54E878182EEAA400B94C7C /* SOSChecklistTableViewCell.h */,
+				2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */,
 				2E54E7E6182EB27700B94C7C /* SOSAppDelegate.h */,
 				2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */,
 				2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */,
@@ -283,6 +288,7 @@
 				2E54E7E8182EB27700B94C7C /* SOSAppDelegate.m in Sources */,
 				2E54E7E4182EB27700B94C7C /* main.m in Sources */,
 				2E54E7F1182EB27700B94C7C /* SOSBaycrest.xcdatamodeld in Sources */,
+				2E54E87A182EEAA400B94C7C /* SOSChecklistTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
