@@ -12,6 +12,9 @@
 @property (nonatomic,strong) NSArray* labels;
 @property (nonatomic,strong) NSArray* colors;
 @end
+@implementation BodyCell
+
+@end
 
 @implementation SOSBodyViewController
 
@@ -25,7 +28,7 @@
 }
 
 UIColor* rgb(float r,float g,float b) {
-    return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
+    return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:0.8];
 }
 
 - (void)viewDidLoad
@@ -44,11 +47,11 @@ UIColor* rgb(float r,float g,float b) {
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.textLabel.text = [self.labels objectAtIndex: indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
+    BodyCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.label.text = [self.labels objectAtIndex: indexPath.row];
+    cell.label.textColor = [UIColor whiteColor];
     cell.backgroundColor = [self.colors objectAtIndex:indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 

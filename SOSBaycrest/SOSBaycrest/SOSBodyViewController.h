@@ -7,5 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@interface BodyCell : UITableViewCell
+@property (nonatomic,weak) IBOutlet UILabel* label;
+
+@end
 @interface SOSBodyViewController : UITableViewController
 @end
