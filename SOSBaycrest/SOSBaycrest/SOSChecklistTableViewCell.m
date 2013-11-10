@@ -42,10 +42,10 @@
 //        [self addSubview:_mainContentView];
 //        [self addSubview:_sideContentView];
         
-        UITapGestureRecognizer *singleFingerTap =
-        [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                action:@selector(slideInOut)];
-        [self addGestureRecognizer:singleFingerTap];
+//        UITapGestureRecognizer *singleFingerTap =
+//        [[UITapGestureRecognizer alloc] initWithTarget:self
+//                                                action:@selector(slideInOut)];
+//        [self addGestureRecognizer:singleFingerTap];
         
     }
     return self;
@@ -131,6 +131,9 @@
 
 - (IBAction)conditionPositiveAction:(id)sender {
     [self slideInOut];
+}
+- (IBAction)microphoneAction:(id)sender {
+    //Not really used, button action connected to detail view controller, which launched the recorder; one recorder per checklist that way.
 }
 
 

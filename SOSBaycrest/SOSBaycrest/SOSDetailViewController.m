@@ -26,12 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
+    self.headerLabel.text = self.systemTitle;
+    self.tableView.tableHeaderView.backgroundColor = self.headerColor;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,15 +46,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    
+//    return 4;
+    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
+    NSLog(@"%d entries",[ci[@"Defs"][0][@"entries"] count]);
+    return [ci[@"Defs"][0][@"entries"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    SOSChecklistTableViewCell *cell = (SOSChecklistTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    NSLog(@"icon test %@",    [cell conditionPositiveButton]);
     
     // Configure the cell...
+    
+    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
+    
+//    ci = ci[@"entries"][0];
+    NSArray* entries = ci[@"Defs"][0][@"entries"];
+    
+    NSDictionary* entry = entries[[indexPath item]];
+    [[cell conditionLabel] setText:entry[@"label"]];
+    
+    [[cell conditionIcon] setImage:[UIImage imageNamed:entry[@"imageResource"]]];
+    
+    
+    
     
     return cell;
 }
@@ -112,5 +128,144 @@
 }
 
  */
+
+-(void) startRecording {
+    
+    //TODO audit this method, source:  http://stackoverflow.com/questions/1010343/how-do-i-record-audio-on-iphone-with-avaudiorecorder
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *err = nil;
+    [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&err];
+    if(err){
+        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        return;
+    }
+    [audioSession setActive:YES error:&err];
+    err = nil;
+    if(err){
+        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        return;
+    }
+    
+    NSDictionary* recordSetting = [[NSMutableDictionary alloc] init];
+    
+//    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
+    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatMPEGLayer3] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+    
+    [recordSetting setValue :[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
+    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
+    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
+    
+    
+    
+    // Create a new dated file
+    NSDate *now = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSString *caldate = [now description];
+    //    recorderFilePath = [[NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate] retain];
+    
+    NSString *prefixString = @"AudioNote";
+    
+    NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
+    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.mp3", prefixString, guid];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *previewImagePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:uniqueFileName];
+    
+    NSURL* imageFileURL = [NSURL fileURLWithPath:previewImagePath];
+    
+    
+    //        NSString* audioOutputPath = [NSString pathWithComponents:@[basePath,wavRecordingFileName]];
+    NSString* audioOutputPath = [imageFileURL path];
+    NSLog(@"audio recording file path is %@",audioOutputPath);
+    NSURL* audioOutputURL = [[NSURL alloc] initFileURLWithPath:audioOutputPath];
+    
+    NSURL* url = [[NSURL alloc] initFileURLWithPath:audioOutputPath];
+    
+    err = nil;
+    AVAudioRecorder* recorder = [[ AVAudioRecorder alloc] initWithURL:url settings:recordSetting error:&err];
+    if(!recorder){
+        NSLog(@"recorder: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        UIAlertView *alert =
+        [[UIAlertView alloc] initWithTitle: @"Error"
+                                   message: @"Failed to initialize recording session."
+                                  delegate: nil
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles:nil];
+        [alert show];
+        //        [alert release];
+        return;
+    }
+    [self setAudioRecorder:recorder];
+    //prepare to record
+    [recorder setDelegate:self];
+    [recorder prepareToRecord];
+    recorder.meteringEnabled = YES;
+    
+    BOOL audioHWAvailable = audioSession.inputIsAvailable;
+    if (! audioHWAvailable) {
+        UIAlertView *cantRecordAlert =
+        [[UIAlertView alloc] initWithTitle: @"Warning"
+                                   message: @"Audio input hardware not available.  Cannot record."
+                                  delegate: nil
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles:nil];
+        [cantRecordAlert show];
+        //        [cantRecordAlert release];
+        return;
+    }
+    
+    
+    // start recording
+    //    [recorder recordForDuration:(NSTimeInterval) 10];
+    [recorder record];
+    [self setRecording:true];
+    
+}
+
+- (IBAction)stopRecording:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // do work here
+        if ([self audioRecorder]) {
+            [[self audioRecorder] stop];
+            NSLog(@"stopping recording");
+        }
+        else {
+            NSLog(@"error: no audio recorder to stop");
+        }    });
+    
+    
+    
+}
+
+#pragma mark AVAudioRecorderDelegate methods
+
+/* audioRecorderDidFinishRecording:successfully: is called when a recording has been finished or stopped. This method is NOT called if the recorder is stopped due to an interruption. */
+- (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
+    bool playWaveAfterRecording = false;
+    
+    if (playWaveAfterRecording) {
+        AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[recorder url] error:nil];
+        [self setPlayer:player];
+//        [player setDelegate:self];
+        [player play];
+    }
+    [self setRecording:false];
+}
+
+/* if an error occurs while encoding it will be reported to the delegate. */
+- (void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder *)recorder error:(NSError *)error {
+    NSLog(@"Failed to record note");
+    [self setRecording:false];
+}
+- (IBAction)microphoneAction:(id)sender {
+    if ([self recording]) {
+        [self stopRecording:nil];
+    }
+    else {
+        [self startRecording];
+    }
+    
+}
 
 @end

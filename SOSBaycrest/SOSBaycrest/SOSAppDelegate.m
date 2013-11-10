@@ -240,8 +240,26 @@ survey = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
 }
 
 -(NSDictionary*) checklistDict {
-//    NSDictionary* info = @{@"Defs": @[@{@"title"]}
-    return nil;
+//    NSDictionary* info = @{@"Defs": @[@{@"title":@"Neurological System",
+//                                        @"entries":@[@{@"label":@"Tired?",
+//                                                       @"imageResource":@"bleh.png"
+//                                                       }]}]};
+    NSDictionary* info = @{@"Defs": @[@{@"title":@"Neurological System",
+                                        @"entries":@[@{@"label":@"Tired?",
+                                                       @"imageResource":@"tired.png"
+                                                       },
+                                                     @{@"label":@"Faint?",
+                                                       @"imageResource":@"faint.png"
+                                                       },
+                                                     @{@"label":@"Sad?",
+                                                       @"imageResource":@"sad.png"
+                                                       }
+                                                     ]}]};
+    return info;
+}
+
++(SOSAppDelegate*) sharedInstance {
+    return (SOSAppDelegate*) [[UIApplication sharedApplication] delegate];
 }
 
 @end

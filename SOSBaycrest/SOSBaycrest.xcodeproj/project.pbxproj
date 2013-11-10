@@ -14,6 +14,11 @@
 		24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE299E182EEECF005725B2 /* navarrow@2x.png */; };
 		24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A1182EEED9005725B2 /* baycrestlogo.png */; };
 		24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */; };
+		24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A7182EF55B005725B2 /* soslaunchimage1.png */; };
+		24AE29AB182EF55B005725B2 /* soslaunchimage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A8182EF55B005725B2 /* soslaunchimage2.png */; };
+		24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */; };
+		24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AD182F0EC0005725B2 /* checkmark.png */; };
+		24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AE182F0EC0005725B2 /* checkmark@2x.png */; };
 		2E54E7D6182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
 		2E54E7D8182EB27700B94C7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */; };
 		2E54E7DA182EB27700B94C7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D9182EB27700B94C7C /* UIKit.framework */; };
@@ -34,6 +39,16 @@
 		2E54E80D182EB27700B94C7C /* SOSBaycrestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E80C182EB27700B94C7C /* SOSBaycrestTests.m */; };
 		2E54E87A182EEAA400B94C7C /* SOSChecklistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */; };
 		FB7BB832182F041800E8DB49 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
+		2E54E886182F02E500B94C7C /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E87C182F02E500B94C7C /* microphone.png */; };
+		2E54E887182F02E500B94C7C /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E87D182F02E500B94C7C /* microphone@2x.png */; };
+		2E54E888182F02E500B94C7C /* refusingcare.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E87E182F02E500B94C7C /* refusingcare.png */; };
+		2E54E889182F02E500B94C7C /* refusingcare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E87F182F02E500B94C7C /* refusingcare@2x.png */; };
+		2E54E88A182F02E500B94C7C /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E880182F02E500B94C7C /* sad.png */; };
+		2E54E88B182F02E500B94C7C /* sad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E881182F02E500B94C7C /* sad@2x.png */; };
+		2E54E88C182F02E500B94C7C /* faint.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E882182F02E500B94C7C /* faint.png */; };
+		2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E883182F02E500B94C7C /* faint@2x.png */; };
+		2E54E88E182F02E500B94C7C /* tired.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E884182F02E500B94C7C /* tired.png */; };
+		2E54E88F182F02E500B94C7C /* tired@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E885182F02E500B94C7C /* tired@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +71,11 @@
 		24AE299E182EEECF005725B2 /* navarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navarrow@2x.png"; sourceTree = "<group>"; };
 		24AE29A1182EEED9005725B2 /* baycrestlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baycrestlogo.png; sourceTree = "<group>"; };
 		24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baycrestlogo@2x.png"; sourceTree = "<group>"; };
+		24AE29A7182EF55B005725B2 /* soslaunchimage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soslaunchimage1.png; sourceTree = "<group>"; };
+		24AE29A8182EF55B005725B2 /* soslaunchimage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soslaunchimage2.png; sourceTree = "<group>"; };
+		24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soslaunchimage2@2x.png"; sourceTree = "<group>"; };
+		24AE29AD182F0EC0005725B2 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		24AE29AE182F0EC0005725B2 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		2E54E7D2182EB27700B94C7C /* SOSBaycrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSBaycrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54E7D5182EB27700B94C7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +101,16 @@
 		2E54E878182EEAA400B94C7C /* SOSChecklistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSChecklistTableViewCell.h; sourceTree = "<group>"; };
 		2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSChecklistTableViewCell.m; sourceTree = "<group>"; };
 		FB7BB831182F041800E8DB49 /* SOSPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SOSPlist.plist; sourceTree = "<group>"; };
+		2E54E87C182F02E500B94C7C /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = microphone.png; path = images/microphone.png; sourceTree = "<group>"; };
+		2E54E87D182F02E500B94C7C /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "microphone@2x.png"; path = "images/microphone@2x.png"; sourceTree = "<group>"; };
+		2E54E87E182F02E500B94C7C /* refusingcare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refusingcare.png; path = images/refusingcare.png; sourceTree = "<group>"; };
+		2E54E87F182F02E500B94C7C /* refusingcare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "refusingcare@2x.png"; path = "images/refusingcare@2x.png"; sourceTree = "<group>"; };
+		2E54E880182F02E500B94C7C /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sad.png; path = images/sad.png; sourceTree = "<group>"; };
+		2E54E881182F02E500B94C7C /* sad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sad@2x.png"; path = "images/sad@2x.png"; sourceTree = "<group>"; };
+		2E54E882182F02E500B94C7C /* faint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = faint.png; path = images/faint.png; sourceTree = "<group>"; };
+		2E54E883182F02E500B94C7C /* faint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "faint@2x.png"; path = "images/faint@2x.png"; sourceTree = "<group>"; };
+		2E54E884182F02E500B94C7C /* tired.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tired.png; path = images/tired.png; sourceTree = "<group>"; };
+		2E54E885182F02E500B94C7C /* tired@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tired@2x.png"; path = "images/tired@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +142,12 @@
 		24AE29A5182EEEE2005725B2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				2E54E87B182F02C900B94C7C /* icon_images */,
+				24AE29AD182F0EC0005725B2 /* checkmark.png */,
+				24AE29AE182F0EC0005725B2 /* checkmark@2x.png */,
+				24AE29A7182EF55B005725B2 /* soslaunchimage1.png */,
+				24AE29A8182EF55B005725B2 /* soslaunchimage2.png */,
+				24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */,
 				24AE29A1182EEED9005725B2 /* baycrestlogo.png */,
 				24AE29A2182EEED9005725B2 /* baycrestlogo@2x.png */,
 				24AE299D182EEECF005725B2 /* navarrow.png */,
@@ -205,6 +241,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2E54E87B182F02C900B94C7C /* icon_images */ = {
+			isa = PBXGroup;
+			children = (
+				2E54E87C182F02E500B94C7C /* microphone.png */,
+				2E54E87D182F02E500B94C7C /* microphone@2x.png */,
+				2E54E87E182F02E500B94C7C /* refusingcare.png */,
+				2E54E87F182F02E500B94C7C /* refusingcare@2x.png */,
+				2E54E880182F02E500B94C7C /* sad.png */,
+				2E54E881182F02E500B94C7C /* sad@2x.png */,
+				2E54E882182F02E500B94C7C /* faint.png */,
+				2E54E883182F02E500B94C7C /* faint@2x.png */,
+				2E54E884182F02E500B94C7C /* tired.png */,
+				2E54E885182F02E500B94C7C /* tired@2x.png */,
+			);
+			name = icon_images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,13 +336,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */,
+				2E54E88C182F02E500B94C7C /* faint.png in Resources */,
+				2E54E88E182F02E500B94C7C /* tired.png in Resources */,
+				2E54E886182F02E500B94C7C /* microphone.png in Resources */,
+				2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */,
 				24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */,
 				24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */,
+				2E54E88F182F02E500B94C7C /* tired@2x.png in Resources */,
 				24AE299F182EEECF005725B2 /* navarrow.png in Resources */,
+				24AE29AB182EF55B005725B2 /* soslaunchimage2.png in Resources */,
+				2E54E888182F02E500B94C7C /* refusingcare.png in Resources */,
+				2E54E887182F02E500B94C7C /* microphone@2x.png in Resources */,
 				24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */,
+				24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */,
 				2E54E7EE182EB27700B94C7C /* Main_iPad.storyboard in Resources */,
+				2E54E88A182F02E500B94C7C /* sad.png in Resources */,
+				24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */,
+				24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */,
+				2E54E88B182F02E500B94C7C /* sad@2x.png in Resources */,
 				2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */,
 				2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */,
+				2E54E889182F02E500B94C7C /* refusingcare@2x.png in Resources */,
+				24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */,
 				2E54E7E2182EB27700B94C7C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

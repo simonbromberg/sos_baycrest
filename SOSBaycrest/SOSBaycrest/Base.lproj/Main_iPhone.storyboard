@@ -62,7 +62,9 @@
                             <outlet property="delegate" destination="3gs-vu-Uhg" id="Gk6-9C-SJO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="skB-pO-FiW"/>
+                    <navigationItem key="navigationItem" id="skB-pO-FiW">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="gtI-zG-9B8"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmc-7Z-oxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,53 +74,102 @@
         <scene sceneID="Iwf-d5-gQO">
             <objects>
                 <tableViewController id="92N-LQ-Edn" customClass="SOSDetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEr-Hd-U6A">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEr-Hd-U6A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="DnZ-9p-hoB">
+                            <rect key="frame" x="0.0" y="64" width="320" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-K7-e1r">
+                                    <rect key="frame" x="15" y="4" width="290" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.48627450980392156" green="0.79607843137254897" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="hCV-K7-e1r" firstAttribute="leading" secondItem="DnZ-9p-hoB" secondAttribute="leading" constant="15" id="C5g-vb-v4S"/>
+                                <constraint firstAttribute="trailing" secondItem="hCV-K7-e1r" secondAttribute="trailing" constant="15" id="JC8-r9-4Pn"/>
+                                <constraint firstAttribute="centerY" secondItem="hCV-K7-e1r" secondAttribute="centerY" id="atC-Do-yya"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="97" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="97"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="114" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
+                                <rect key="frame" x="0.0" y="111" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zlt-aH-fAy" id="aeH-W0-7GD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
-                                            <rect key="frame" x="20" y="0.0" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
+                                            <rect key="frame" x="20" y="11" width="109" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="iyB-ed-Lft"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY">
-                                            <rect key="frame" x="20" y="29" width="60" height="60"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY">
+                                            <rect key="frame" x="20" y="40" width="67" height="67"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="67" id="J7D-Dt-wLV"/>
+                                                <constraint firstAttribute="width" constant="67" id="tWW-LO-YNm"/>
+                                            </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
-                                            <rect key="frame" x="137" y="29" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
+                                            <rect key="frame" x="212" y="20" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button">
+                                            <state key="normal" title="Yes">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
                                                 <action selector="conditionPositiveAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="lRs-7N-RO0"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
-                                            <rect key="frame" x="137" y="59" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
+                                            <rect key="frame" x="212" y="72" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button">
+                                            <state key="normal" title="No">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-IO-iMQ">
+                                            <rect key="frame" x="280" y="36" width="154" height="57"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Microphone" image="microphone.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="microphoneAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="Ijt-OC-dBH"/>
+                                                <action selector="microphoneAction:" destination="92N-LQ-Edn" eventType="touchUpInside" id="fRd-vK-80n"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="83" id="01Z-MH-n1B"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="11" id="2um-GJ-c9o"/>
+                                        <constraint firstItem="VvL-tH-szY" firstAttribute="top" secondItem="JT0-J8-aja" secondAttribute="bottom" constant="8" symbolic="YES" id="7oH-w3-lpd"/>
+                                        <constraint firstItem="aGd-LY-nmi" firstAttribute="top" secondItem="aWS-Dm-LhE" secondAttribute="bottom" constant="22" id="AMZ-i8-PIG"/>
+                                        <constraint firstAttribute="bottom" secondItem="VvL-tH-szY" secondAttribute="bottom" constant="6" id="WS9-ph-KRv"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="VvL-tH-szY" secondAttribute="leading" id="Z3F-2r-42f"/>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="20" symbolic="YES" id="dqD-uq-i7H"/>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="aGd-LY-nmi" secondAttribute="leading" id="ePY-fD-641"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="aeH-W0-7GD" secondAttribute="leading" constant="20" symbolic="YES" id="m2p-eB-yDr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="conditionIcon" destination="aeH-W0-7GD" id="xFh-o9-wx8"/>
+                                    <outlet property="conditionIcon" destination="VvL-tH-szY" id="mlh-ln-Nwg"/>
                                     <outlet property="conditionLabel" destination="JT0-J8-aja" id="nYF-Ih-j6I"/>
                                     <outlet property="conditionNegativeButton" destination="aGd-LY-nmi" id="iqf-sf-PGX"/>
                                     <outlet property="conditionPositiveButton" destination="aWS-Dm-LhE" id="WmD-lv-odr"/>
+                                    <outlet property="microphoneButton" destination="Xuh-IO-iMQ" id="biN-4L-KJc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,6 +179,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="3jR-Jk-WfJ"/>
+                    <connections>
+                        <outlet property="headerLabel" destination="hCV-K7-e1r" id="P3g-ZC-h6W"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMy-9K-W7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +224,9 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone.png" width="57" height="57"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -14,9 +14,12 @@
 @property (nonatomic,strong) UIView* sideContentView;
 @property (nonatomic) bool isSlidOut;
 
-@property (weak, nonatomic) IBOutlet UIView *conditionIcon;
+//@property (weak, nonatomic) IBOutlet UIView *conditionIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *conditionIcon;
+
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *conditionPositiveButton;
 @property (weak, nonatomic) IBOutlet UIButton *conditionNegativeButton;
+@property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
 
 @end
