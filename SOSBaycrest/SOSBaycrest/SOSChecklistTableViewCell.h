@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SOSDetailViewController;
 @interface SOSChecklistTableViewCell : UITableViewCell
 
 @property (nonatomic,strong) UIView* mainContentView;
 @property (nonatomic,strong) UIView* sideContentView;
 @property (nonatomic) bool isSlidOut;
+@property (nonatomic,assign) NSInteger rowIndex;
+
+@property (nonatomic,weak) SOSDetailViewController* dvc; //hack
 
 //@property (weak, nonatomic) IBOutlet UIView *conditionIcon;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionIcon;
@@ -31,8 +34,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *changeButton;
 @property (weak, nonatomic) IBOutlet UIButton *noChangeButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *conditionPositiveButton;
-@property (weak, nonatomic) IBOutlet UIButton *conditionNegativeButton;
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
 
 @end

@@ -7,9 +7,10 @@
 //
 
 #import "SOSDetailViewController.h"
+#import "SOSChecklistTableViewCell.h"
 
 @interface SOSDetailViewController ()
-
+@property (nonatomic,strong) NSMutableArray* checklists;
 @end
 
 @implementation SOSDetailViewController
@@ -29,6 +30,9 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
     self.headerLabel.text = self.systemTitle;
     self.tableView.tableHeaderView.backgroundColor = self.headerColor;
+    
+    NSDictionary* sharedDic = [NSMutableDictionary dictionaryWithDictionary: [[SOSAppDelegate sharedInstance] checklistDict]];
+    self.checklists = [sharedDic objectForKey:self.systemTitle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,10 +51,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-//    return 4;
-    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
-//    NSLog(@"%d entries",[ci[@"Defs"][0][@"entries"] count]);
-    return [ci[self.systemTitle] count];
+    return [self.checklists count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,11 +59,9 @@
     static NSString *CellIdentifier = @"Cell";
     SOSChecklistTableViewCell *cell = (SOSChecklistTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    NSLog(@"icon test %@",    [cell conditionPositiveButton]);
+//    NSLog(@"icon test %@",    [cell conditionPositiveButton]);
     
     // Configure the cell...
-    
-    NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
     
 //    ci = ci[@"entries"][0];
 //    NSArray* entries = ci[@"Defs"][0][@"entries"];
@@ -72,75 +71,27 @@
 //    
 //    [[cell conditionIcon] setImage:[UIImage imageNamed:entry[@"imageResource"]]];
     
-
 //    ci = ci[@"SensorySystem"][[indexPath item] ];
-    
-    ci = ci[self.systemTitle][[indexPath item] ];
+    NSMutableDictionary* ci = [self.checklists objectAtIndex:indexPath.row];
     
     
     [[cell conditionLabel] setText:ci[@"Question"]];
     
     [[cell conditionIcon] setImage:[UIImage imageNamed:ci[@"Image"]]];
     
-    
+    cell.rowIndex = indexPath.row;
     [cell setChecklistEntry:ci];
-    
-    
+
+    cell.dvc = self;
     
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) checklistCellEntryUpdated:(SOSChecklistTableViewCell *)cell {
+    NSInteger index = cell.rowIndex;
+    [self.checklists replaceObjectAtIndex:index withObject:cell.checklistEntry];
 }
 
- */
 
 -(void) startRecording:(SOSChecklistTableViewCell*) checklistCell {
     

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SOSAppDelegate.h"
-#import "SOSChecklistTableViewCell.h"
+
 #import <AVFoundation/AVFoundation.h>
 
+@class SOSChecklistTableViewCell;
 @protocol SOSDetailViewControllerDelegate;
 
 @interface SOSDetailViewController : UITableViewController<AVAudioRecorderDelegate>
@@ -29,15 +30,7 @@
 @property (nonatomic, strong) UIView* recordingModalBlockingView;
 @property (nonatomic, strong) SOSChecklistTableViewCell* checklistCellHavingNoteRecorded;
 
-@end
-
-@interface ConditionCell : UITableViewCell
-@property (nonatomic,weak) IBOutlet UILabel* titleLabel;
-@property (nonatomic,weak) IBOutlet UIImageView* leftImage;
-@property (nonatomic,weak) IBOutlet UIButton* yesButton;
-@property (nonatomic,weak) IBOutlet UIButton* noButton;
-
-
+-(void) checklistCellEntryUpdated: (SOSChecklistTableViewCell*) cell;
 @end
 
 

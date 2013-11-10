@@ -8,6 +8,7 @@
 
 #import "SOSChecklistTableViewCell.h"
 #import "SOSAppDelegate.h"
+#import "SOSDetailViewController.h"
 
 @implementation SOSChecklistTableViewCell
 
@@ -120,8 +121,9 @@
 //    return transition;
 }
 
+
 -(void) prepareForReuse {
-    [self setIsSlidOut:false];//TODO actually slide back the views
+    [self setIsSlidOut:FALSE];
 }
 
 
@@ -133,38 +135,24 @@
 }
 
 #pragma mark custom methods
-
-- (IBAction)conditionPositiveAction:(id)sender {
-    if (self.positiveState) {
-        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
+-(void) setChecklistEntry:(NSMutableDictionary *)checklistEntry {
+    _checklistEntry = checklistEntry;
+    id condition = [checklistEntry objectForKey:@"Condition"];
+    
+    if (condition == [NSNull null] || condition == nil) {
+        self.noChangeButtonIsActive = FALSE;
+        self.changeButtonIsActive = FALSE;
     }
     else {
-        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changeactive"] forState:UIControlStateNormal];
-    }
-    [self slideInOut];
-    self.positiveState = !self.positiveState;
-    
-    if (self.negativeState) {
-        [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
-        self.negativeState = !self.negativeState;
-    }
-    
-    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
-    
-    
-    if (self.positiveState) {
-        [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
-        if ([[self checklistEntry] objectForKey:@"Urgent"]) {
-            NSLog(@"class of superview: %@",[[[[self superview] superview] superview] class]);
+        BOOL bCondition = [(NSNumber*) condition boolValue];
+        if (self.noChangeButtonIsActive != !bCondition) {
+            [self toggleNoChangeButton];
         }
-        
+        if (self.changeButtonIsActive != bCondition) {
+            [self toggleChangeButton];
+        }
     }
-    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
-    
-    
-    
 }
-
 
 -(void) toggleChangeButton {
     self.changeButtonIsActive = !self.changeButtonIsActive;
@@ -186,6 +174,7 @@
     else {
         [[self checklistEntry] setObject:[NSNumber numberWithBool:self.changeButtonIsActive] forKey:@"Condition"];
     }
+    [self.dvc checklistCellEntryUpdated: self];
 }
 -(IBAction) tappedChangeButton {
     [self toggleChangeButton];
@@ -193,6 +182,9 @@
         [self toggleNoChangeButton];
     }
     
+    if (self.changeButtonIsActive) {
+        [self slideInOut];
+    }
     [self updateChecklistEntry];
     
 }
@@ -204,24 +196,6 @@
     }
 }
 
-- (IBAction)conditionNegativeAction:(id)sender {
-    if (self.negativeState) {
-        [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
-    }
-    else [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangeactive"] forState:UIControlStateNormal];
-    self.negativeState = !self.negativeState;
-    
-    if (self.positiveState) {
-        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
-        self.positiveState = !self.positiveState;
-    }
-    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
-
-    [[self checklistEntry] setObject:[NSNumber numberWithBool:self.positiveState] forKey:@"Condition"];
-    
-    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
-    
-}
 - (IBAction)microphoneAction:(id)sender {
     //Not really used, button action connected to detail view controller, which launched the recorder; one recorder per checklist that way.
 }
