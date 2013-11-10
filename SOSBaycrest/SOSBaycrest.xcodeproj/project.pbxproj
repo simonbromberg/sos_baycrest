@@ -63,6 +63,50 @@
 		2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E883182F02E500B94C7C /* faint@2x.png */; };
 		2E54E88E182F02E500B94C7C /* tired.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E884182F02E500B94C7C /* tired.png */; };
 		2E54E88F182F02E500B94C7C /* tired@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E885182F02E500B94C7C /* tired@2x.png */; };
+		2EBF14B3182FE6850069344B /* balance.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1484182FE6850069344B /* balance.png */; };
+		2EBF14B4182FE6850069344B /* balance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1485182FE6850069344B /* balance@2x.png */; };
+		2EBF14B5182FE6850069344B /* callbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1487182FE6850069344B /* callbutton.png */; };
+		2EBF14B6182FE6850069344B /* callbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1488182FE6850069344B /* callbutton@2x.png */; };
+		2EBF14B7182FE6850069344B /* changeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1489182FE6850069344B /* changeactive.png */; };
+		2EBF14B8182FE6850069344B /* changeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148A182FE6850069344B /* changeactive@2x.png */; };
+		2EBF14B9182FE6850069344B /* changedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148B182FE6850069344B /* changedefault.png */; };
+		2EBF14BA182FE6850069344B /* changedefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148C182FE6850069344B /* changedefault@2x.png */; };
+		2EBF14BB182FE6850069344B /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148D182FE6850069344B /* infobutton.png */; };
+		2EBF14BC182FE6850069344B /* infobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148E182FE6850069344B /* infobutton@2x.png */; };
+		2EBF14BD182FE6850069344B /* mailbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF148F182FE6850069344B /* mailbutton.png */; };
+		2EBF14BE182FE6850069344B /* mailbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1490182FE6850069344B /* mailbutton@2x.png */; };
+		2EBF14BF182FE6850069344B /* nochangeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1491182FE6850069344B /* nochangeactive.png */; };
+		2EBF14C0182FE6850069344B /* nochangeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1492182FE6850069344B /* nochangeactive@2x.png */; };
+		2EBF14C1182FE6850069344B /* nochangedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1493182FE6850069344B /* nochangedefault.png */; };
+		2EBF14C2182FE6850069344B /* nochangedefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1494182FE6850069344B /* nochangedefault@2x.png */; };
+		2EBF14C3182FE6850069344B /* ear.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1495182FE6850069344B /* ear.png */; };
+		2EBF14C4182FE6850069344B /* ear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1496182FE6850069344B /* ear@2x.png */; };
+		2EBF14C5182FE6850069344B /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1497182FE6850069344B /* eye.png */; };
+		2EBF14C6182FE6850069344B /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF1498182FE6850069344B /* eye@2x.png */; };
+		2EBF14C7182FE6850069344B /* pain.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF149A182FE6850069344B /* pain.png */; };
+		2EBF14C8182FE6850069344B /* pain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF149B182FE6850069344B /* pain@2x.png */; };
+		2EBF14C9182FE6850069344B /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF149C182FE6850069344B /* heart.png */; };
+		2EBF14CA182FE6850069344B /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF149D182FE6850069344B /* heart@2x.png */; };
+		2EBF14CB182FE6850069344B /* breathing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF149F182FE6850069344B /* breathing.png */; };
+		2EBF14CC182FE6850069344B /* breathing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A0182FE6850069344B /* breathing@2x.png */; };
+		2EBF14CD182FE6850069344B /* miccheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A1182FE6850069344B /* miccheckmark.png */; };
+		2EBF14CE182FE6850069344B /* miccheckmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A2182FE6850069344B /* miccheckmark@2x.png */; };
+		2EBF14CF182FE6850069344B /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A3182FE6850069344B /* mouth.png */; };
+		2EBF14D0182FE6850069344B /* mouth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A4182FE6850069344B /* mouth@2x.png */; };
+		2EBF14D1182FE6850069344B /* musclestrength.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A5182FE6850069344B /* musclestrength.png */; };
+		2EBF14D2182FE6850069344B /* musclestrength@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A6182FE6850069344B /* musclestrength@2x.png */; };
+		2EBF14D3182FE6850069344B /* nose.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A7182FE6850069344B /* nose.png */; };
+		2EBF14D4182FE6850069344B /* nose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A8182FE6850069344B /* nose@2x.png */; };
+		2EBF14D5182FE6850069344B /* numbness.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14A9182FE6850069344B /* numbness.png */; };
+		2EBF14D6182FE6850069344B /* numbness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AA182FE6850069344B /* numbness@2x.png */; };
+		2EBF14D7182FE6850069344B /* onesideweakness.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AB182FE6850069344B /* onesideweakness.png */; };
+		2EBF14D8182FE6850069344B /* onesideweakness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AC182FE6850069344B /* onesideweakness@2x.png */; };
+		2EBF14D9182FE6850069344B /* rigid.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AD182FE6850069344B /* rigid.png */; };
+		2EBF14DA182FE6850069344B /* rigid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AE182FE6850069344B /* rigid@2x.png */; };
+		2EBF14DB182FE6850069344B /* sweat.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14AF182FE6850069344B /* sweat.png */; };
+		2EBF14DC182FE6850069344B /* sweat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B0182FE6850069344B /* sweat@2x.png */; };
+		2EBF14DD182FE6850069344B /* tremor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B1182FE6850069344B /* tremor.png */; };
+		2EBF14DE182FE6850069344B /* tremor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B2182FE6850069344B /* tremor@2x.png */; };
 		FB7BB832182F041800E8DB49 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +183,50 @@
 		2E54E883182F02E500B94C7C /* faint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "faint@2x.png"; path = "images/faint@2x.png"; sourceTree = "<group>"; };
 		2E54E884182F02E500B94C7C /* tired.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tired.png; path = images/tired.png; sourceTree = "<group>"; };
 		2E54E885182F02E500B94C7C /* tired@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tired@2x.png"; path = "images/tired@2x.png"; sourceTree = "<group>"; };
+		2EBF1484182FE6850069344B /* balance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = balance.png; path = images/balance.png; sourceTree = "<group>"; };
+		2EBF1485182FE6850069344B /* balance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "balance@2x.png"; path = "images/balance@2x.png"; sourceTree = "<group>"; };
+		2EBF1487182FE6850069344B /* callbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callbutton.png; sourceTree = "<group>"; };
+		2EBF1488182FE6850069344B /* callbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callbutton@2x.png"; sourceTree = "<group>"; };
+		2EBF1489182FE6850069344B /* changeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeactive.png; sourceTree = "<group>"; };
+		2EBF148A182FE6850069344B /* changeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "changeactive@2x.png"; sourceTree = "<group>"; };
+		2EBF148B182FE6850069344B /* changedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changedefault.png; sourceTree = "<group>"; };
+		2EBF148C182FE6850069344B /* changedefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "changedefault@2x.png"; sourceTree = "<group>"; };
+		2EBF148D182FE6850069344B /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infobutton.png; sourceTree = "<group>"; };
+		2EBF148E182FE6850069344B /* infobutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infobutton@2x.png"; sourceTree = "<group>"; };
+		2EBF148F182FE6850069344B /* mailbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mailbutton.png; sourceTree = "<group>"; };
+		2EBF1490182FE6850069344B /* mailbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailbutton@2x.png"; sourceTree = "<group>"; };
+		2EBF1491182FE6850069344B /* nochangeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nochangeactive.png; sourceTree = "<group>"; };
+		2EBF1492182FE6850069344B /* nochangeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nochangeactive@2x.png"; sourceTree = "<group>"; };
+		2EBF1493182FE6850069344B /* nochangedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nochangedefault.png; sourceTree = "<group>"; };
+		2EBF1494182FE6850069344B /* nochangedefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nochangedefault@2x.png"; sourceTree = "<group>"; };
+		2EBF1495182FE6850069344B /* ear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ear.png; path = images/ear.png; sourceTree = "<group>"; };
+		2EBF1496182FE6850069344B /* ear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ear@2x.png"; path = "images/ear@2x.png"; sourceTree = "<group>"; };
+		2EBF1497182FE6850069344B /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = images/eye.png; sourceTree = "<group>"; };
+		2EBF1498182FE6850069344B /* eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "eye@2x.png"; path = "images/eye@2x.png"; sourceTree = "<group>"; };
+		2EBF149A182FE6850069344B /* pain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pain.png; sourceTree = "<group>"; };
+		2EBF149B182FE6850069344B /* pain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pain@2x.png"; sourceTree = "<group>"; };
+		2EBF149C182FE6850069344B /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = images/heart.png; sourceTree = "<group>"; };
+		2EBF149D182FE6850069344B /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart@2x.png"; path = "images/heart@2x.png"; sourceTree = "<group>"; };
+		2EBF149F182FE6850069344B /* breathing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breathing.png; sourceTree = "<group>"; };
+		2EBF14A0182FE6850069344B /* breathing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "breathing@2x.png"; sourceTree = "<group>"; };
+		2EBF14A1182FE6850069344B /* miccheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = miccheckmark.png; path = images/miccheckmark.png; sourceTree = "<group>"; };
+		2EBF14A2182FE6850069344B /* miccheckmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "miccheckmark@2x.png"; path = "images/miccheckmark@2x.png"; sourceTree = "<group>"; };
+		2EBF14A3182FE6850069344B /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = images/mouth.png; sourceTree = "<group>"; };
+		2EBF14A4182FE6850069344B /* mouth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mouth@2x.png"; path = "images/mouth@2x.png"; sourceTree = "<group>"; };
+		2EBF14A5182FE6850069344B /* musclestrength.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = musclestrength.png; path = images/musclestrength.png; sourceTree = "<group>"; };
+		2EBF14A6182FE6850069344B /* musclestrength@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "musclestrength@2x.png"; path = "images/musclestrength@2x.png"; sourceTree = "<group>"; };
+		2EBF14A7182FE6850069344B /* nose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nose.png; path = images/nose.png; sourceTree = "<group>"; };
+		2EBF14A8182FE6850069344B /* nose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nose@2x.png"; path = "images/nose@2x.png"; sourceTree = "<group>"; };
+		2EBF14A9182FE6850069344B /* numbness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numbness.png; path = images/numbness.png; sourceTree = "<group>"; };
+		2EBF14AA182FE6850069344B /* numbness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "numbness@2x.png"; path = "images/numbness@2x.png"; sourceTree = "<group>"; };
+		2EBF14AB182FE6850069344B /* onesideweakness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onesideweakness.png; path = images/onesideweakness.png; sourceTree = "<group>"; };
+		2EBF14AC182FE6850069344B /* onesideweakness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onesideweakness@2x.png"; path = "images/onesideweakness@2x.png"; sourceTree = "<group>"; };
+		2EBF14AD182FE6850069344B /* rigid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rigid.png; path = images/rigid.png; sourceTree = "<group>"; };
+		2EBF14AE182FE6850069344B /* rigid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rigid@2x.png"; path = "images/rigid@2x.png"; sourceTree = "<group>"; };
+		2EBF14AF182FE6850069344B /* sweat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sweat.png; path = images/sweat.png; sourceTree = "<group>"; };
+		2EBF14B0182FE6850069344B /* sweat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sweat@2x.png"; path = "images/sweat@2x.png"; sourceTree = "<group>"; };
+		2EBF14B1182FE6850069344B /* tremor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tremor.png; path = images/tremor.png; sourceTree = "<group>"; };
+		2EBF14B2182FE6850069344B /* tremor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tremor@2x.png"; path = "images/tremor@2x.png"; sourceTree = "<group>"; };
 		FB7BB831182F041800E8DB49 /* SOSPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SOSPlist.plist; path = SOSBaycrestTests/SOSPlist.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -295,6 +383,35 @@
 		2E54E87B182F02C900B94C7C /* icon_images */ = {
 			isa = PBXGroup;
 			children = (
+				2EBF1484182FE6850069344B /* balance.png */,
+				2EBF1485182FE6850069344B /* balance@2x.png */,
+				2EBF1486182FE6850069344B /* buttons */,
+				2EBF1495182FE6850069344B /* ear.png */,
+				2EBF1496182FE6850069344B /* ear@2x.png */,
+				2EBF1497182FE6850069344B /* eye.png */,
+				2EBF1498182FE6850069344B /* eye@2x.png */,
+				2EBF1499182FE6850069344B /* headache */,
+				2EBF149C182FE6850069344B /* heart.png */,
+				2EBF149D182FE6850069344B /* heart@2x.png */,
+				2EBF149E182FE6850069344B /* lungs */,
+				2EBF14A1182FE6850069344B /* miccheckmark.png */,
+				2EBF14A2182FE6850069344B /* miccheckmark@2x.png */,
+				2EBF14A3182FE6850069344B /* mouth.png */,
+				2EBF14A4182FE6850069344B /* mouth@2x.png */,
+				2EBF14A5182FE6850069344B /* musclestrength.png */,
+				2EBF14A6182FE6850069344B /* musclestrength@2x.png */,
+				2EBF14A7182FE6850069344B /* nose.png */,
+				2EBF14A8182FE6850069344B /* nose@2x.png */,
+				2EBF14A9182FE6850069344B /* numbness.png */,
+				2EBF14AA182FE6850069344B /* numbness@2x.png */,
+				2EBF14AB182FE6850069344B /* onesideweakness.png */,
+				2EBF14AC182FE6850069344B /* onesideweakness@2x.png */,
+				2EBF14AD182FE6850069344B /* rigid.png */,
+				2EBF14AE182FE6850069344B /* rigid@2x.png */,
+				2EBF14AF182FE6850069344B /* sweat.png */,
+				2EBF14B0182FE6850069344B /* sweat@2x.png */,
+				2EBF14B1182FE6850069344B /* tremor.png */,
+				2EBF14B2182FE6850069344B /* tremor@2x.png */,
 				2E54E87C182F02E500B94C7C /* microphone.png */,
 				2E54E87D182F02E500B94C7C /* microphone@2x.png */,
 				2E54E87E182F02E500B94C7C /* refusingcare.png */,
@@ -307,6 +424,48 @@
 				2E54E885182F02E500B94C7C /* tired@2x.png */,
 			);
 			name = icon_images;
+			sourceTree = "<group>";
+		};
+		2EBF1486182FE6850069344B /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2EBF1487182FE6850069344B /* callbutton.png */,
+				2EBF1488182FE6850069344B /* callbutton@2x.png */,
+				2EBF1489182FE6850069344B /* changeactive.png */,
+				2EBF148A182FE6850069344B /* changeactive@2x.png */,
+				2EBF148B182FE6850069344B /* changedefault.png */,
+				2EBF148C182FE6850069344B /* changedefault@2x.png */,
+				2EBF148D182FE6850069344B /* infobutton.png */,
+				2EBF148E182FE6850069344B /* infobutton@2x.png */,
+				2EBF148F182FE6850069344B /* mailbutton.png */,
+				2EBF1490182FE6850069344B /* mailbutton@2x.png */,
+				2EBF1491182FE6850069344B /* nochangeactive.png */,
+				2EBF1492182FE6850069344B /* nochangeactive@2x.png */,
+				2EBF1493182FE6850069344B /* nochangedefault.png */,
+				2EBF1494182FE6850069344B /* nochangedefault@2x.png */,
+			);
+			name = buttons;
+			path = images/buttons;
+			sourceTree = "<group>";
+		};
+		2EBF1499182FE6850069344B /* headache */ = {
+			isa = PBXGroup;
+			children = (
+				2EBF149A182FE6850069344B /* pain.png */,
+				2EBF149B182FE6850069344B /* pain@2x.png */,
+			);
+			name = headache;
+			path = images/headache;
+			sourceTree = "<group>";
+		};
+		2EBF149E182FE6850069344B /* lungs */ = {
+			isa = PBXGroup;
+			children = (
+				2EBF149F182FE6850069344B /* breathing.png */,
+				2EBF14A0182FE6850069344B /* breathing@2x.png */,
+			);
+			name = lungs;
+			path = images/lungs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,42 +546,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B2F922182FE30A00A53891 /* mailbutton@2x.png in Resources */,
+				2EBF14B6182FE6850069344B /* callbutton@2x.png in Resources */,
+				2EBF14C6182FE6850069344B /* eye@2x.png in Resources */,
 				2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */,
+				2EBF14DC182FE6850069344B /* sweat@2x.png in Resources */,
 				24B2F916182FE2D900A53891 /* changeactive@2x.png in Resources */,
 				24B2F924182FE30A00A53891 /* callbutton@2x.png in Resources */,
+				2EBF14B7182FE6850069344B /* changeactive.png in Resources */,
+				2EBF14B3182FE6850069344B /* balance.png in Resources */,
 				24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */,
+				2EBF14D8182FE6850069344B /* onesideweakness@2x.png in Resources */,
+				2EBF14DE182FE6850069344B /* tremor@2x.png in Resources */,
+				2EBF14BD182FE6850069344B /* mailbutton.png in Resources */,
 				2E54E88C182F02E500B94C7C /* faint.png in Resources */,
+				2EBF14D4182FE6850069344B /* nose@2x.png in Resources */,
+				2EBF14C7182FE6850069344B /* pain.png in Resources */,
+				2EBF14D2182FE6850069344B /* musclestrength@2x.png in Resources */,
+				2EBF14D9182FE6850069344B /* rigid.png in Resources */,
 				2E54E88E182F02E500B94C7C /* tired.png in Resources */,
+				2EBF14BC182FE6850069344B /* infobutton@2x.png in Resources */,
+				2EBF14CC182FE6850069344B /* breathing@2x.png in Resources */,
 				24B2F928182FE35E00A53891 /* infobutton@2x.png in Resources */,
 				2E54E886182F02E500B94C7C /* microphone.png in Resources */,
 				2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */,
 				24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */,
 				24B2F919182FE2D900A53891 /* nochangeactive.png in Resources */,
 				24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */,
+				2EBF14CE182FE6850069344B /* miccheckmark@2x.png in Resources */,
+				2EBF14C9182FE6850069344B /* heart.png in Resources */,
 				2E54E88F182F02E500B94C7C /* tired@2x.png in Resources */,
+				2EBF14CD182FE6850069344B /* miccheckmark.png in Resources */,
 				24AE29D6182F2649005725B2 /* Appicon.png in Resources */,
+				2EBF14C4182FE6850069344B /* ear@2x.png in Resources */,
+				2EBF14C1182FE6850069344B /* nochangedefault.png in Resources */,
+				2EBF14DB182FE6850069344B /* sweat.png in Resources */,
 				24AE299F182EEECF005725B2 /* navarrow.png in Resources */,
 				24B2F917182FE2D900A53891 /* changedefault.png in Resources */,
 				24B2F91B182FE2D900A53891 /* nochangedefault.png in Resources */,
 				24AE29AB182EF55B005725B2 /* soslaunchimage2.png in Resources */,
+				2EBF14BF182FE6850069344B /* nochangeactive.png in Resources */,
+				2EBF14C2182FE6850069344B /* nochangedefault@2x.png in Resources */,
+				2EBF14C8182FE6850069344B /* pain@2x.png in Resources */,
 				2E54E888182F02E500B94C7C /* refusingcare.png in Resources */,
+				2EBF14B9182FE6850069344B /* changedefault.png in Resources */,
 				24B2F918182FE2D900A53891 /* changedefault@2x.png in Resources */,
+				2EBF14BB182FE6850069344B /* infobutton.png in Resources */,
 				24B2F923182FE30A00A53891 /* callbutton.png in Resources */,
 				2E54E887182F02E500B94C7C /* microphone@2x.png in Resources */,
+				2EBF14CF182FE6850069344B /* mouth.png in Resources */,
 				24B2F915182FE2D900A53891 /* changeactive.png in Resources */,
+				2EBF14D6182FE6850069344B /* numbness@2x.png in Resources */,
+				2EBF14C3182FE6850069344B /* ear.png in Resources */,
+				2EBF14D5182FE6850069344B /* numbness.png in Resources */,
 				24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */,
+				2EBF14C5182FE6850069344B /* eye.png in Resources */,
+				2EBF14DD182FE6850069344B /* tremor.png in Resources */,
 				24B2F921182FE30A00A53891 /* mailbutton.png in Resources */,
 				24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */,
 				2E54E88A182F02E500B94C7C /* sad.png in Resources */,
 				24B2F91C182FE2D900A53891 /* nochangedefault@2x.png in Resources */,
+				2EBF14BA182FE6850069344B /* changedefault@2x.png in Resources */,
 				24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */,
+				2EBF14B4182FE6850069344B /* balance@2x.png in Resources */,
 				24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */,
+				2EBF14D7182FE6850069344B /* onesideweakness.png in Resources */,
+				2EBF14C0182FE6850069344B /* nochangeactive@2x.png in Resources */,
+				2EBF14D3182FE6850069344B /* nose.png in Resources */,
+				2EBF14B5182FE6850069344B /* callbutton.png in Resources */,
+				2EBF14CB182FE6850069344B /* breathing.png in Resources */,
+				2EBF14D0182FE6850069344B /* mouth@2x.png in Resources */,
 				24B2F91A182FE2D900A53891 /* nochangeactive@2x.png in Resources */,
+				2EBF14BE182FE6850069344B /* mailbutton@2x.png in Resources */,
 				2E54E88B182F02E500B94C7C /* sad@2x.png in Resources */,
 				2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */,
 				2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */,
 				2E54E889182F02E500B94C7C /* refusingcare@2x.png in Resources */,
+				2EBF14B8182FE6850069344B /* changeactive@2x.png in Resources */,
 				24B2F927182FE35E00A53891 /* infobutton.png in Resources */,
+				2EBF14CA182FE6850069344B /* heart@2x.png in Resources */,
+				2EBF14DA182FE6850069344B /* rigid@2x.png in Resources */,
+				2EBF14D1182FE6850069344B /* musclestrength.png in Resources */,
 				24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */,
 				2E54E7E2182EB27700B94C7C /* InfoPlist.strings in Resources */,
 			);
