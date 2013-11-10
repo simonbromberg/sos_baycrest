@@ -168,7 +168,14 @@
     //Not really used, button action connected to detail view controller, which launched the recorder; one recorder per checklist that way.
 }
 - (IBAction)infoAction:(id)sender {
-    
+    if ([[self checklistEntry] objectForKey:@"Info"]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Descripton of \"%@\"",[[self checklistEntry] objectForKey:@"Question"]]
+                                                        message:[[self checklistEntry] objectForKey:@"Info"]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
     
 }
 

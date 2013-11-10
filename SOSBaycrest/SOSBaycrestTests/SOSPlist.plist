@@ -87,6 +87,8 @@
 	<key>Neurological System</key>
 	<array>
 		<dict>
+			<key>Info</key>
+			<string>Sudden numbness of face, arm, leg – only 1 side</string>
 			<key>Urgent</key>
 			<true/>
 			<key>Question</key>
@@ -97,6 +99,9 @@
 			<string>no</string>
 		</dict>
 		<dict>
+			<key>Info</key>
+			<string>• Not talking as per usual (talking more or less, slurring)
+• Sudden change in speech</string>
 			<key>Urgent</key>
 			<true/>
 			<key>Question</key>

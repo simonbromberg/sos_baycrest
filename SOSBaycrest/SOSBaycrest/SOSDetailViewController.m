@@ -357,5 +357,6 @@
 -(IBAction) submit {
     [self.delegate detailViewControllerDidComplete:self];
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 @end
