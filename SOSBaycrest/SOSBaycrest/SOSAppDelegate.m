@@ -15,6 +15,8 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize modelArray, survey;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,6 +36,85 @@
     }
     return YES;
 }
+
+
+
+NSString* path = [[NSBundle mainBundle] pathForResource:@"Survey" ofType:@"plist"];
+survey = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+
+
+
+-(void)yesButtonTapped:(UIButton *)sender{
+    
+    
+    QuestionModel *model = [questionModelArray objectAtIndex:sender.tag];
+    
+    [self updateSurveyForQuestionId:sender.tag andAnswer:@"YES"];
+    
+    [self alterDictionaryFor:questionItemAnswer withResponse:YES];
+    
+}
+
+    
+-(void)updateSurveyForQuestionId:(int)questionId andAnswer:(NSString*)answer{
+    
+    NSArray* surveyquestions = [survey objectForKey:@"NeurologicalSystem"];
+    
+    NSDictionary* qa = [surveyquestions objectAtIndex:questionId];
+    // check the answer
+    [qa setValue:answer forKey:@"Answer"];
+    
+}
+
+
+-(void)alterDictionaryFor:(NSString *)questionItemAnswer withResponse:(BOOL) yesOrNo {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"SOSPlist" ofType:@"plist"];
+    if(!questions){
+        questions = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    }
+    
+    // NSLog(@"%@", [questions objectForKey:@"Q1"] );
+    // NSLog(@"%@", [questions objectForKey:@"Q1Answer"] );
+    
+    // NSLog(@"%@, %@", questionItemAnswer, [questions objectForKey:questionItemAnswer] );
+    
+    if (yesOrNo == YES){
+        NSNumber *boos = [NSNumber numberWithBool:YES];
+        [questions setValue:boos forKey:questionItemAnswer];
+    } else {
+        NSNumber *boos = [NSNumber numberWithBool:NO];
+        [questions setValue:boos forKey:questionItemAnswer];
+    }
+    
+    [questions writeToFile:path atomically: YES];
+    
+    
+}
+
+-(void)updateSurveyForQuestionId:(int)questionID andAnswerID:(NSString*)answerID{
+    
+    NSArray* surveyquestions = [dict objectForKey:@"NeurologicalSystem"];
+    
+    NSDictionary* qa = [surveyquestions objectAtIndex:questionID];
+    // check the answer
+    
+    [qa setValue:answerID forKey:@"Answer"];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
