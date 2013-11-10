@@ -72,7 +72,7 @@ UIColor* rgba(float r,float g, float b, float a) {
     cell.label.textColor = [UIColor whiteColor];
     cell.backgroundColor = [self.colors objectAtIndex:row];
     
-    NSString* imageName = self.completedSystems[row] ? @"checkmark" : @"navarrow";
+    NSString* imageName = [self.completedSystems[row] boolValue] ? @"checkmark" : @"navarrow";
     UIImage* image = [UIImage imageNamed:imageName];
     
     UIImageView* imageView =[[UIImageView alloc ] initWithImage:image];
@@ -103,6 +103,7 @@ UIColor* rgba(float r,float g, float b, float a) {
     [self.tableView deselectRowAtIndexPath:selectedRowIndexPath animated:YES];
     detailVC.systemTitle = [self.labels objectAtIndex:selectedRowIndex];
     detailVC.headerColor = [self.colors objectAtIndex:selectedRowIndex];
+    detailVC.systemIndex = selectedRowIndex;
     detailVC.delegate = self;
 }
 
@@ -110,7 +111,7 @@ UIColor* rgba(float r,float g, float b, float a) {
 
 -(void) detailViewControllerDidComplete:(SOSDetailViewController *)viewController {
     NSInteger index = viewController.systemIndex;
-    [self.completedSystems insertObject:[NSNumber numberWithBool:YES] atIndex:index];
+    [self.completedSystems replaceObjectAtIndex: index withObject:[NSNumber numberWithBool:YES]];
     NSArray* indexPaths = [NSArray arrayWithObjects: [NSIndexPath indexPathForRow:index inSection:0],nil]; //TODO: if you ever add sections this will have to change
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
