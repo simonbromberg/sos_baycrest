@@ -26,6 +26,17 @@
     // Configure the view for the selected state
 }
 - (IBAction)playAudioNote:(id)sender {
+    if ([self audioNote]) {
+        
+    }
+//    if (playWaveAfterRecording) {
+        AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[self audioNote] error:nil];
+        [self setPlayer:player];
+        //        [player setDelegate:self];
+        [player play];
+//    }
+//    [self setRecording:false];
+    
 }
 - (IBAction)shareIssue:(id)sender {
 }

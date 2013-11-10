@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface SOSSummaryTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *itemName;
 @property (strong, nonatomic) NSURL* audioNote;
+@property (nonatomic, strong) AVAudioPlayer* player;
 
 @end
