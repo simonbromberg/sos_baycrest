@@ -28,9 +28,7 @@
 		2E54E7E4182EB27700B94C7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E7E3182EB27700B94C7C /* main.m */; };
 		2E54E7E8182EB27700B94C7C /* SOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */; };
 		2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */; };
-		2E54E7EE182EB27700B94C7C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E7EC182EB27700B94C7C /* Main_iPad.storyboard */; };
 		2E54E7F1182EB27700B94C7C /* SOSBaycrest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E7EF182EB27700B94C7C /* SOSBaycrest.xcdatamodeld */; };
-		2E54E7F4182EB27700B94C7C /* SOSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E54E7F3182EB27700B94C7C /* SOSMasterViewController.m */; };
 		2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E54E7F8182EB27700B94C7C /* Images.xcassets */; };
 		2E54E800182EB27700B94C7C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7FF182EB27700B94C7C /* XCTest.framework */; };
 		2E54E801182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
@@ -89,10 +87,7 @@
 		2E54E7E6182EB27700B94C7C /* SOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOSAppDelegate.h; sourceTree = "<group>"; };
 		2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOSAppDelegate.m; sourceTree = "<group>"; };
 		2E54E7EA182EB27700B94C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		2E54E7ED182EB27700B94C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		2E54E7F0182EB27700B94C7C /* SOSBaycrest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SOSBaycrest.xcdatamodel; sourceTree = "<group>"; };
-		2E54E7F2182EB27700B94C7C /* SOSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOSMasterViewController.h; sourceTree = "<group>"; };
-		2E54E7F3182EB27700B94C7C /* SOSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOSMasterViewController.m; sourceTree = "<group>"; };
 		2E54E7F8182EB27700B94C7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E54E7FE182EB27700B94C7C /* SOSBaycrestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOSBaycrestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54E7FF182EB27700B94C7C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -197,9 +192,6 @@
 				2E54E7E6182EB27700B94C7C /* SOSAppDelegate.h */,
 				2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */,
 				2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */,
-				2E54E7EC182EB27700B94C7C /* Main_iPad.storyboard */,
-				2E54E7F2182EB27700B94C7C /* SOSMasterViewController.h */,
-				2E54E7F3182EB27700B94C7C /* SOSMasterViewController.m */,
 				24AE2997182EDA31005725B2 /* SOSBodyViewController.h */,
 				24AE2998182EDA31005725B2 /* SOSBodyViewController.m */,
 				24AE299A182EE1DC005725B2 /* SOSDetailViewController.h */,
@@ -351,7 +343,6 @@
 				2E54E887182F02E500B94C7C /* microphone@2x.png in Resources */,
 				24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */,
 				24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */,
-				2E54E7EE182EB27700B94C7C /* Main_iPad.storyboard in Resources */,
 				2E54E88A182F02E500B94C7C /* sad.png in Resources */,
 				24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */,
 				24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */,
@@ -382,7 +373,6 @@
 			files = (
 				24AE2999182EDA31005725B2 /* SOSBodyViewController.m in Sources */,
 				24AE299C182EE1DC005725B2 /* SOSDetailViewController.m in Sources */,
-				2E54E7F4182EB27700B94C7C /* SOSMasterViewController.m in Sources */,
 				2E54E7E8182EB27700B94C7C /* SOSAppDelegate.m in Sources */,
 				2E54E7E4182EB27700B94C7C /* main.m in Sources */,
 				2E54E7F1182EB27700B94C7C /* SOSBaycrest.xcdatamodeld in Sources */,
@@ -423,14 +413,6 @@
 				2E54E7EA182EB27700B94C7C /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2E54E7EC182EB27700B94C7C /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E54E7ED182EB27700B94C7C /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		2E54E809182EB27700B94C7C /* InfoPlist.strings */ = {
