@@ -132,6 +132,8 @@
 - (IBAction)conditionPositiveAction:(id)sender {
     [self slideInOut];
 }
+- (IBAction)microphoneAction:(id)sender {
+}
 
 
 @end

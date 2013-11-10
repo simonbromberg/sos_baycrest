@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *conditionPositiveButton;
 @property (weak, nonatomic) IBOutlet UIButton *conditionNegativeButton;
+@property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
 
 @end
