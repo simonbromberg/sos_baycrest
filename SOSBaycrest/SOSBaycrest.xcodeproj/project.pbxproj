@@ -28,6 +28,10 @@
 		24AE29D3182F2641005725B2 /* nochangedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29CB182F2641005725B2 /* nochangedefault.png */; };
 		24AE29D4182F2641005725B2 /* nochangedefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29CC182F2641005725B2 /* nochangedefault@2x.png */; };
 		24AE29D6182F2649005725B2 /* Appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29D5182F2649005725B2 /* Appicon.png */; };
+		24AE29E3182FDD44005725B2 /* callbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29DF182FDD44005725B2 /* callbutton.png */; };
+		24AE29E4182FDD44005725B2 /* callbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E0182FDD44005725B2 /* callbutton@2x.png */; };
+		24AE29E5182FDD44005725B2 /* mailbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E1182FDD44005725B2 /* mailbutton.png */; };
+		24AE29E6182FDD44005725B2 /* mailbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E2182FDD44005725B2 /* mailbutton@2x.png */; };
 		2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 		2E39E6E1182FDAEF00F7F144 /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E39E6D7182FDAEF00F7F144 /* infobutton.png */; };
 		2E39E6E2182FDAEF00F7F144 /* infobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E39E6D8182FDAEF00F7F144 /* infobutton@2x.png */; };
@@ -103,6 +107,10 @@
 		24AE29CB182F2641005725B2 /* nochangedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nochangedefault.png; sourceTree = "<group>"; };
 		24AE29CC182F2641005725B2 /* nochangedefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nochangedefault@2x.png"; sourceTree = "<group>"; };
 		24AE29D5182F2649005725B2 /* Appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Appicon.png; sourceTree = "<group>"; };
+		24AE29DF182FDD44005725B2 /* callbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = callbutton.png; path = ../callbutton.png; sourceTree = "<group>"; };
+		24AE29E0182FDD44005725B2 /* callbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "callbutton@2x.png"; path = "../callbutton@2x.png"; sourceTree = "<group>"; };
+		24AE29E1182FDD44005725B2 /* mailbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mailbutton.png; path = ../mailbutton.png; sourceTree = "<group>"; };
+		24AE29E2182FDD44005725B2 /* mailbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailbutton@2x.png"; path = "../mailbutton@2x.png"; sourceTree = "<group>"; };
 		2E39E6D7182FDAEF00F7F144 /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = infobutton.png; path = images/infobutton.png; sourceTree = "<group>"; };
 		2E39E6D8182FDAEF00F7F144 /* infobutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "infobutton@2x.png"; path = "images/infobutton@2x.png"; sourceTree = "<group>"; };
 		2E39E6D9182FDAEF00F7F144 /* nochangedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nochangedefault.png; path = images/nochangedefault.png; sourceTree = "<group>"; };
@@ -196,6 +204,10 @@
 		24AE29C4182F2641005725B2 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				24AE29DF182FDD44005725B2 /* callbutton.png */,
+				24AE29E0182FDD44005725B2 /* callbutton@2x.png */,
+				24AE29E1182FDD44005725B2 /* mailbutton.png */,
+				24AE29E2182FDD44005725B2 /* mailbutton@2x.png */,
 				24AE29C5182F2641005725B2 /* changeactive.png */,
 				24AE29C6182F2641005725B2 /* changeactive@2x.png */,
 				24AE29C7182F2641005725B2 /* changedefault.png */,
@@ -425,16 +437,20 @@
 				2E54E88A182F02E500B94C7C /* sad.png in Resources */,
 				2E39E6E2182FDAEF00F7F144 /* infobutton@2x.png in Resources */,
 				24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */,
+				24AE29E4182FDD44005725B2 /* callbutton@2x.png in Resources */,
 				24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */,
 				2E39E6E8182FDAEF00F7F144 /* nochangeactive@2x.png in Resources */,
 				2E54E88B182F02E500B94C7C /* sad@2x.png in Resources */,
 				24AE29CD182F2641005725B2 /* changeactive.png in Resources */,
 				2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */,
+				24AE29E3182FDD44005725B2 /* callbutton.png in Resources */,
 				24AE29D4182F2641005725B2 /* nochangedefault@2x.png in Resources */,
 				2E39E6EA182FDAEF00F7F144 /* changeactive@2x.png in Resources */,
 				2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */,
 				2E54E889182F02E500B94C7C /* refusingcare@2x.png in Resources */,
+				24AE29E6182FDD44005725B2 /* mailbutton@2x.png in Resources */,
 				24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */,
+				24AE29E5182FDD44005725B2 /* mailbutton.png in Resources */,
 				2E54E7E2182EB27700B94C7C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
