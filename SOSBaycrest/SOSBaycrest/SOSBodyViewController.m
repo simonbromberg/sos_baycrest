@@ -87,7 +87,7 @@ UIColor* rgba(float r,float g, float b, float a) {
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     SOSDetailViewController* detailVC =  (SOSDetailViewController*)segue.destinationViewController;
-    
+    detailVC.systemTitle = [self.labels objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
 }
 
 

@@ -11,7 +11,8 @@
 #import "SOSChecklistTableViewCell.h"
 
 @interface SOSDetailViewController : UITableViewController
-
+@property (nonatomic,strong) NSString* systemTitle;
+@property (nonatomic,weak) IBOutlet UILabel* headerLabel;
 @end
 
 @interface ConditionCell : UITableViewCell

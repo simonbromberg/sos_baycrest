@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
+    self.headerLabel.text = self.systemTitle;
 }
 
 - (void)didReceiveMemoryWarning
