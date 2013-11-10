@@ -10,7 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface SOSSummaryTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *itemName;
+@property (weak, nonatomic) IBOutlet UITextView *itemName;
+//@property (weak, nonatomic) IBOutlet UILabel *itemName;
 @property (strong, nonatomic) NSURL* audioNote;
 @property (nonatomic, strong) AVAudioPlayer* player;
 @property (weak, nonatomic) IBOutlet UIButton *playAudioNoteButton;
