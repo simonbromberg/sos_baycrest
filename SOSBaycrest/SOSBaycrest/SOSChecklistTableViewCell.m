@@ -174,10 +174,9 @@
 }
 
 -(void) toggleNoChangeButton {
-    NSString* buttonImage = self.changeButtonIsActive ? @"nochangeactive" : @"nochangedefault";
+    self.noChangeButtonIsActive = !self.noChangeButtonIsActive;
+    NSString* buttonImage = self.noChangeButtonIsActive ? @"nochangeactive" : @"nochangedefault";
     [self.noChangeButton setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
-    
-    
 }
 
 -(void) updateChecklistEntry {
