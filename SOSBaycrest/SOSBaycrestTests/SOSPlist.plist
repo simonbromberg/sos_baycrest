@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NeurologicalSystem</key>
+	<key>Neurological System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -37,7 +37,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>SensorySystem</key>
+	<key>Sensory System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -72,7 +72,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>RespiratorySystem</key>
+	<key>Respiratory System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -107,7 +107,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>CardiovascularSystem</key>
+	<key>Cardiovascular System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -142,7 +142,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>IntegumentarySystem</key>
+	<key>Integumentary System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -177,7 +177,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>GastrointestinalSystem</key>
+	<key>Gastrointestinal System</key>
 	<array>
 		<dict>
 			<key>Question</key>
@@ -212,7 +212,7 @@
 			<string>no</string>
 		</dict>
 	</array>
-	<key>GenitourinarySystem</key>
+	<key>Genitourinary System</key>
 	<array>
 		<dict>
 			<key>Question</key>

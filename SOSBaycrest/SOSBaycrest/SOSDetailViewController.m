@@ -49,8 +49,8 @@
     
 //    return 4;
     NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
-    NSLog(@"%d entries",[ci[@"Defs"][0][@"entries"] count]);
-    return [ci[@"SensorySystem"] count];
+//    NSLog(@"%d entries",[ci[@"Defs"][0][@"entries"] count]);
+    return [ci[self.systemTitle] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,7 +73,8 @@
 //    [[cell conditionIcon] setImage:[UIImage imageNamed:entry[@"imageResource"]]];
     
 
-    ci = ci[@"SensorySystem"][[indexPath item] ];
+//    ci = ci[@"SensorySystem"][[indexPath item] ];
+    ci = ci[self.systemTitle][[indexPath item] ];
     
     [[cell conditionLabel] setText:ci[@"Question"]];
     
