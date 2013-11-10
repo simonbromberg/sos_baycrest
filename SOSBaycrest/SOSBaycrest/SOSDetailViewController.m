@@ -74,6 +74,7 @@
     
 
 //    ci = ci[@"SensorySystem"][[indexPath item] ];
+    
     ci = ci[self.systemTitle][[indexPath item] ];
     
     

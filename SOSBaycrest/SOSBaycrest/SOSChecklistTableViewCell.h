@@ -17,13 +17,20 @@
 //@property (weak, nonatomic) IBOutlet UIView *conditionIcon;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionIcon;
 
-@property (nonatomic,assign) BOOL condition;
+
+@property (nonatomic,assign) BOOL changeButtonIsActive;
+@property (nonatomic,assign) BOOL noChangeButtonIsActive;
+
 @property (nonatomic,assign) BOOL positiveState;
 @property (nonatomic,assign) BOOL negativeState;
 
 @property (nonatomic,strong) NSMutableDictionary* checklistEntry;
 
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+@property (weak, nonatomic) IBOutlet UIButton *noChangeButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *conditionPositiveButton;
 @property (weak, nonatomic) IBOutlet UIButton *conditionNegativeButton;
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;

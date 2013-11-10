@@ -164,6 +164,46 @@
     
 }
 
+
+-(void) toggleChangeButton {
+    self.changeButtonIsActive = !self.changeButtonIsActive;
+    NSString* buttonImage = self.changeButtonIsActive ? @"changeactive" : @"changedefault";
+    [self.changeButton setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
+    
+}
+
+-(void) toggleNoChangeButton {
+    NSString* buttonImage = self.changeButtonIsActive ? @"changeactive" : @"changedefault";
+    [self.noChangeButton setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
+    
+    
+}
+
+-(void) updateChecklistEntry {
+    if (!self.changeButtonIsActive && !self.noChangeButtonIsActive) {
+        [[self checklistEntry] setObject:[NSNull null] forKey:@"Condition"];
+    }
+    else {
+        [[self checklistEntry] setObject:[NSNumber numberWithBool:self.changeButtonIsActive] forKey:@"Condition"];
+    }
+}
+-(IBAction) tappedChangeButton {
+    [self toggleChangeButton];
+    if (self.noChangeButtonIsActive) {
+        [self toggleNoChangeButton];
+    }
+    
+    [self updateChecklistEntry];
+    
+}
+
+-(IBAction) tappedNoChangeButton {
+    [self toggleNoChangeButton];
+    if (self.changeButtonIsActive) {
+        [self toggleChangeButton];
+    }
+}
+
 - (IBAction)conditionNegativeAction:(id)sender {
     if (self.negativeState) {
         [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
@@ -177,10 +217,8 @@
     }
     NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
 
-
-    if (self.positiveState) {
-        [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
-    }
+    [[self checklistEntry] setObject:[NSNumber numberWithBool:self.positiveState] forKey:@"Condition"];
+    
     NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
     
 }
