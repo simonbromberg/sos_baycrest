@@ -148,8 +148,28 @@
     
     NSDictionary* recordSetting = [[NSMutableDictionary alloc] init];
     
-//    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
-    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatMPEGLayer3] forKey:AVFormatIDKey];
+    
+    bool makeWav = true;
+    
+    
+    if (makeWav) {
+        
+    }
+    else {
+        //    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
+        [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+        [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+        [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+        
+        [recordSetting setValue:[NSNumber numberWithInt: 16] forKey:AVEncoderBitRateKey];
+        [recordSetting setValue:[NSNumber numberWithInt: AVAudioQualityMin] forKey:AVEncoderAudioQualityKey];
+        
+        //    [recordSetting setValue :[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
+        //    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
+        //    [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
+
+    }
+    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
     [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
     [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
     
@@ -167,7 +187,9 @@
     NSString *prefixString = @"AudioNote";
     
     NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
-    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.mp3", prefixString, guid];
+//    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.mp3", prefixString, guid];
+//    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.mp4", prefixString, guid];
+    NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@.wav", prefixString, guid];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *previewImagePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:uniqueFileName];
@@ -233,16 +255,13 @@
         else {
             NSLog(@"error: no audio recorder to stop");
         }    });
-    
-    
-    
 }
 
 #pragma mark AVAudioRecorderDelegate methods
 
 /* audioRecorderDidFinishRecording:successfully: is called when a recording has been finished or stopped. This method is NOT called if the recorder is stopped due to an interruption. */
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
-    bool playWaveAfterRecording = false;
+    bool playWaveAfterRecording = true;
     
     if (playWaveAfterRecording) {
         AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[recorder url] error:nil];
