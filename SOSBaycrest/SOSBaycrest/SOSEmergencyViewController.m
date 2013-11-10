@@ -16,6 +16,7 @@
 - (IBAction)callPressed {
     //TODO: add phone number in settings?
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:4160000000"]];
+
 }
 
 - (IBAction)mailButtonPressed {
