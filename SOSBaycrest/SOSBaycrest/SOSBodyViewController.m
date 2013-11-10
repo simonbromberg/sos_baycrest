@@ -103,6 +103,7 @@ UIColor* rgba(float r,float g, float b, float a) {
     [self.tableView deselectRowAtIndexPath:selectedRowIndexPath animated:YES];
     detailVC.systemTitle = [self.labels objectAtIndex:selectedRowIndex];
     detailVC.headerColor = [self.colors objectAtIndex:selectedRowIndex];
+    detailVC.delegate = self;
 }
 
 #pragma mark - Detail View Controller Delegate

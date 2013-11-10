@@ -24,6 +24,7 @@
 @property (nonatomic) bool recording;
 
 @property (nonatomic, strong) AVAudioPlayer* player;
+@property (nonatomic,unsafe_unretained) id <SOSDetailViewControllerDelegate> delegate;
 
 @end
 
@@ -32,7 +33,6 @@
 @property (nonatomic,weak) IBOutlet UIImageView* leftImage;
 @property (nonatomic,weak) IBOutlet UIButton* yesButton;
 @property (nonatomic,weak) IBOutlet UIButton* noButton;
-
 
 
 @end
