@@ -35,6 +35,7 @@
 		24B2F927182FE35E00A53891 /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B2F925182FE35E00A53891 /* infobutton.png */; };
 		24B2F928182FE35E00A53891 /* infobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B2F926182FE35E00A53891 /* infobutton@2x.png */; };
 		24BEA635182FDF75002BFC1C /* SOSEmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */; };
+		2E0DAFA6182FF92200E72C8A /* SOSSummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DAFA5182FF92200E72C8A /* SOSSummaryTableViewCell.m */; };
 		2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 		2E54E7D6182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
 		2E54E7D8182EB27700B94C7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */; };
@@ -107,6 +108,11 @@
 		2EBF14DC182FE6850069344B /* sweat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B0182FE6850069344B /* sweat@2x.png */; };
 		2EBF14DD182FE6850069344B /* tremor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B1182FE6850069344B /* tremor.png */; };
 		2EBF14DE182FE6850069344B /* tremor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14B2182FE6850069344B /* tremor@2x.png */; };
+		2EBF14E3182FF22C0069344B /* sharebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14DF182FF22C0069344B /* sharebutton.png */; };
+		2EBF14E4182FF22C0069344B /* sharebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14E0182FF22C0069344B /* sharebutton@2x.png */; };
+		2EBF14E5182FF22C0069344B /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14E1182FF22C0069344B /* playbutton.png */; };
+		2EBF14E6182FF22C0069344B /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBF14E2182FF22C0069344B /* playbutton@2x.png */; };
+		2EBF14E9182FF28C0069344B /* SOSSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF14E8182FF28C0069344B /* SOSSummaryTableViewController.m */; };
 		FB7BB832182F041800E8DB49 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +158,8 @@
 		24B2F926182FE35E00A53891 /* infobutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "infobutton@2x.png"; path = "../images/buttons/infobutton@2x.png"; sourceTree = "<group>"; };
 		24BEA633182FDF75002BFC1C /* SOSEmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSEmergencyViewController.h; sourceTree = "<group>"; };
 		24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSEmergencyViewController.m; sourceTree = "<group>"; };
+		2E0DAFA4182FF92200E72C8A /* SOSSummaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOSSummaryTableViewCell.h; path = ../SOSSummaryTableViewCell.h; sourceTree = "<group>"; };
+		2E0DAFA5182FF92200E72C8A /* SOSSummaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSSummaryTableViewCell.m; path = ../SOSSummaryTableViewCell.m; sourceTree = "<group>"; };
 		2E54E7D2182EB27700B94C7C /* SOSBaycrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSBaycrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54E7D5182EB27700B94C7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +235,12 @@
 		2EBF14B0182FE6850069344B /* sweat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sweat@2x.png"; path = "images/sweat@2x.png"; sourceTree = "<group>"; };
 		2EBF14B1182FE6850069344B /* tremor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tremor.png; path = images/tremor.png; sourceTree = "<group>"; };
 		2EBF14B2182FE6850069344B /* tremor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tremor@2x.png"; path = "images/tremor@2x.png"; sourceTree = "<group>"; };
+		2EBF14DF182FF22C0069344B /* sharebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sharebutton.png; path = images/sharebutton.png; sourceTree = "<group>"; };
+		2EBF14E0182FF22C0069344B /* sharebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharebutton@2x.png"; path = "images/sharebutton@2x.png"; sourceTree = "<group>"; };
+		2EBF14E1182FF22C0069344B /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playbutton.png; path = images/playbutton.png; sourceTree = "<group>"; };
+		2EBF14E2182FF22C0069344B /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playbutton@2x.png"; path = "images/playbutton@2x.png"; sourceTree = "<group>"; };
+		2EBF14E7182FF28B0069344B /* SOSSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSSummaryTableViewController.h; sourceTree = "<group>"; };
+		2EBF14E8182FF28C0069344B /* SOSSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSSummaryTableViewController.m; sourceTree = "<group>"; };
 		FB7BB831182F041800E8DB49 /* SOSPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SOSPlist.plist; path = SOSBaycrestTests/SOSPlist.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -342,6 +356,10 @@
 				24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */,
 				24BEA633182FDF75002BFC1C /* SOSEmergencyViewController.h */,
 				24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */,
+				2EBF14E7182FF28B0069344B /* SOSSummaryTableViewController.h */,
+				2EBF14E8182FF28C0069344B /* SOSSummaryTableViewController.m */,
+				2E0DAFA4182FF92200E72C8A /* SOSSummaryTableViewCell.h */,
+				2E0DAFA5182FF92200E72C8A /* SOSSummaryTableViewCell.m */,
 				2E54E7F8182EB27700B94C7C /* Images.xcassets */,
 				2E54E7EF182EB27700B94C7C /* SOSBaycrest.xcdatamodeld */,
 				2E54E7DE182EB27700B94C7C /* Supporting Files */,
@@ -383,6 +401,10 @@
 		2E54E87B182F02C900B94C7C /* icon_images */ = {
 			isa = PBXGroup;
 			children = (
+				2EBF14DF182FF22C0069344B /* sharebutton.png */,
+				2EBF14E0182FF22C0069344B /* sharebutton@2x.png */,
+				2EBF14E1182FF22C0069344B /* playbutton.png */,
+				2EBF14E2182FF22C0069344B /* playbutton@2x.png */,
 				2EBF1484182FE6850069344B /* balance.png */,
 				2EBF1485182FE6850069344B /* balance@2x.png */,
 				2EBF1486182FE6850069344B /* buttons */,
@@ -550,6 +572,7 @@
 				2EBF14C6182FE6850069344B /* eye@2x.png in Resources */,
 				2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */,
 				2EBF14DC182FE6850069344B /* sweat@2x.png in Resources */,
+				2EBF14E3182FF22C0069344B /* sharebutton.png in Resources */,
 				24B2F916182FE2D900A53891 /* changeactive@2x.png in Resources */,
 				24B2F924182FE30A00A53891 /* callbutton@2x.png in Resources */,
 				2EBF14B7182FE6850069344B /* changeactive.png in Resources */,
@@ -559,11 +582,13 @@
 				2EBF14DE182FE6850069344B /* tremor@2x.png in Resources */,
 				2EBF14BD182FE6850069344B /* mailbutton.png in Resources */,
 				2E54E88C182F02E500B94C7C /* faint.png in Resources */,
+				2EBF14E4182FF22C0069344B /* sharebutton@2x.png in Resources */,
 				2EBF14D4182FE6850069344B /* nose@2x.png in Resources */,
 				2EBF14C7182FE6850069344B /* pain.png in Resources */,
 				2EBF14D2182FE6850069344B /* musclestrength@2x.png in Resources */,
 				2EBF14D9182FE6850069344B /* rigid.png in Resources */,
 				2E54E88E182F02E500B94C7C /* tired.png in Resources */,
+				2EBF14E5182FF22C0069344B /* playbutton.png in Resources */,
 				2EBF14BC182FE6850069344B /* infobutton@2x.png in Resources */,
 				2EBF14CC182FE6850069344B /* breathing@2x.png in Resources */,
 				24B2F928182FE35E00A53891 /* infobutton@2x.png in Resources */,
@@ -571,6 +596,7 @@
 				2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */,
 				24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */,
 				24B2F919182FE2D900A53891 /* nochangeactive.png in Resources */,
+				2EBF14E6182FF22C0069344B /* playbutton@2x.png in Resources */,
 				24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */,
 				2EBF14CE182FE6850069344B /* miccheckmark@2x.png in Resources */,
 				2EBF14C9182FE6850069344B /* heart.png in Resources */,
@@ -651,6 +677,8 @@
 				24AE299C182EE1DC005725B2 /* SOSDetailViewController.m in Sources */,
 				24BEA635182FDF75002BFC1C /* SOSEmergencyViewController.m in Sources */,
 				2E54E7E8182EB27700B94C7C /* SOSAppDelegate.m in Sources */,
+				2E0DAFA6182FF92200E72C8A /* SOSSummaryTableViewCell.m in Sources */,
+				2EBF14E9182FF28C0069344B /* SOSSummaryTableViewController.m in Sources */,
 				2E54E7E4182EB27700B94C7C /* main.m in Sources */,
 				2E54E7F1182EB27700B94C7C /* SOSBaycrest.xcdatamodeld in Sources */,
 				2E54E87A182EEAA400B94C7C /* SOSChecklistTableViewCell.m in Sources */,

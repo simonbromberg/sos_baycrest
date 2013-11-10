@@ -22,6 +22,7 @@
     return self;
 }
 
+
 -(void) awakeFromNib {
     self.noChangeButtonIsActive = FALSE;
     self.changeButtonIsActive = FALSE;
@@ -45,6 +46,8 @@
         _sideContentView = [[UIView alloc] initWithFrame:CGRectMake(screenWidth, 0, screenWidth*0.8, cellHeight)];
         [_sideContentView setBackgroundColor:[UIColor redColor]];
         
+        
+        
 //        [self addSubview:_mainContentView];
 //        [self addSubview:_sideContentView];
         
@@ -53,10 +56,37 @@
 //                                                action:@selector(slideInOut)];
 //        [self addGestureRecognizer:singleFingerTap];
         
+        UISwipeGestureRecognizer* gestureR;
+        gestureR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)] ;
+        gestureR.direction = UISwipeGestureRecognizerDirectionLeft;
+        [self addGestureRecognizer:gestureR];
+        
+        gestureR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)] ;
+        gestureR.direction = UISwipeGestureRecognizerDirectionRight;
+        [self addGestureRecognizer:gestureR];
+        
+        
     }
     return self;
     
 }
+
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
+    CGRect mf = [[self mainContentView] frame];
+    CGRect sf = [[self sideContentView] frame];
+    NSLog(@"%lu = %ld",recognizer.direction,recognizer.state);
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        
+         [self slideInOut];
+        
+    }
+    else if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft){
+        [self slideInOut];
+    }
+    
+}
+
+
 
 -(void) slideInOut {
 //    NSLog(@"slideinout pressed");

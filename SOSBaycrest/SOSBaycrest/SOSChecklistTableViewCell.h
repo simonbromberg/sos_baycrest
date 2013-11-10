@@ -36,4 +36,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
 
+
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer;
 @end
+

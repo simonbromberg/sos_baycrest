@@ -87,6 +87,7 @@
     
     return cell;
 }
+
 -(void) checklistCellEntryUpdated:(SOSChecklistTableViewCell *)cell {
     NSInteger index = cell.rowIndex;
     [self.checklists replaceObjectAtIndex:index withObject:cell.checklistEntry];
@@ -279,14 +280,14 @@
     [[[self checklistCellHavingNoteRecorded] microphoneButton] setEnabled:false];
     
     
-    bool playWaveAfterRecording = true;
-    
-    if (playWaveAfterRecording) {
-        AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[recorder url] error:nil];
-        [self setPlayer:player];
-//        [player setDelegate:self];
-        [player play];
-    }
+//    bool playWaveAfterRecording = true;
+//    
+//    if (playWaveAfterRecording) {
+//        AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[recorder url] error:nil];
+//        [self setPlayer:player];
+////        [player setDelegate:self];
+//        [player play];
+//    }
     [self setRecording:false];
 }
 
