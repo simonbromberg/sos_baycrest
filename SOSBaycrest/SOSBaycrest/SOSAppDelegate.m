@@ -36,7 +36,7 @@
     }
     return YES;
 }
-
+/*
 
 
 NSString* path = [[NSBundle mainBundle] pathForResource:@"Survey" ofType:@"plist"];
@@ -105,7 +105,7 @@ survey = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
 
 
 
-
+*/
 
 
 
