@@ -356,6 +356,12 @@
     }
     
 }
+- (IBAction)changeButtonPressed:(id)sender {
+    SOSChecklistTableViewCell* cell = (SOSChecklistTableViewCell*)[[[sender superview] superview] superview];
+    if ([[cell checklistEntry] objectForKey:@"Urgent"]) {
+        [self performSegueWithIdentifier:@"Emergency" sender:cell];
+    }
+}
 
 
 -(IBAction) submit {

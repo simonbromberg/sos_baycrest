@@ -153,8 +153,14 @@
     
     if (self.positiveState) {
         [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
+        if ([[self checklistEntry] objectForKey:@"Urgent"]) {
+            NSLog(@"class of superview: %@",[[[[self superview] superview] superview] class]);
+        }
+        
     }
     NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
+    
+    
     
 }
 
