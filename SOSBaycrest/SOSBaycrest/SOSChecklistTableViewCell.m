@@ -186,8 +186,8 @@
 }
 
 -(void) setButtonsToDefault {
-    [self.changeButton setImage:[UIImage imageNamed:@"changeDefault"] forState:UIControlStateNormal];
-    [self.noChangeButton setImage:[UIImage imageNamed:@"noChangeDefault"] forState:UIControlStateNormal];
+    [self.changeButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
+    [self.noChangeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
     
 }
 
