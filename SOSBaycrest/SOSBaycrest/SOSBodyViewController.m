@@ -66,10 +66,14 @@ UIColor* rgba(float r,float g, float b, float a) {
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BodyCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.label.text = [self.labels objectAtIndex: indexPath.row];
+    NSInteger row = indexPath.row;
+    
+    cell.label.text = [self.labels objectAtIndex: row];
     cell.label.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [self.colors objectAtIndex:indexPath.row];
-    UIImage* image = [UIImage imageNamed:@"navarrow"];
+    cell.backgroundColor = [self.colors objectAtIndex:row];
+    
+    NSString* imageName = self.completedSystems[row] ? @"checkmark" : @"navarrow";
+    UIImage* image = [UIImage imageNamed:imageName];
     
     UIImageView* imageView =[[UIImageView alloc ] initWithImage:image];
     [imageView setContentMode:UIViewContentModeScaleAspectFit];
@@ -77,7 +81,6 @@ UIColor* rgba(float r,float g, float b, float a) {
     imageView.frame = CGRectMake(0, 14, imageView.frame.size.width, imageView.frame.size.height);
     [containter addSubview:imageView];
     cell.accessoryView = containter;
-    
     return cell;
 }
 
@@ -107,8 +110,8 @@ UIColor* rgba(float r,float g, float b, float a) {
 -(void) detailViewControllerDidComplete:(SOSDetailViewController *)viewController {
     NSInteger index = viewController.systemIndex;
     [self.completedSystems insertObject:[NSNumber numberWithBool:YES] atIndex:index];
-//    NSArray* indexPaths = [NSArray arrayWithObjects :];
-//    [self.tableView reloadRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:UITableViewRowAnimationFade];
+    NSArray* indexPaths = [NSArray arrayWithObjects: [NSIndexPath indexPathForRow:index inSection:0],nil]; //TODO: if you ever add sections this will have to change
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end
