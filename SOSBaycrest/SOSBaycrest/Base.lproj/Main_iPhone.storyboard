@@ -79,27 +79,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="DnZ-9p-hoB">
-                            <rect key="frame" x="0.0" y="64" width="320" height="38"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-K7-e1r">
-                                    <rect key="frame" x="20" y="9" width="280" height="21"/>
+                                    <rect key="frame" x="15" y="4" width="290" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.48627450980392156" green="0.79607843137254897" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="hCV-K7-e1r" firstAttribute="leading" secondItem="DnZ-9p-hoB" secondAttribute="leading" constant="20" symbolic="YES" id="C5g-vb-v4S"/>
-                                <constraint firstAttribute="trailing" secondItem="hCV-K7-e1r" secondAttribute="trailing" constant="20" symbolic="YES" id="JC8-r9-4Pn"/>
+                                <constraint firstItem="hCV-K7-e1r" firstAttribute="leading" secondItem="DnZ-9p-hoB" secondAttribute="leading" constant="15" id="C5g-vb-v4S"/>
+                                <constraint firstAttribute="trailing" secondItem="hCV-K7-e1r" secondAttribute="trailing" constant="15" id="JC8-r9-4Pn"/>
                                 <constraint firstAttribute="centerY" secondItem="hCV-K7-e1r" secondAttribute="centerY" id="atC-Do-yya"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="128" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
-                                <rect key="frame" x="0.0" y="124" width="320" height="128"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="128" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
+                                <rect key="frame" x="0.0" y="111" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zlt-aH-fAy" id="aeH-W0-7GD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>

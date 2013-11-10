@@ -12,6 +12,7 @@
 
 @interface SOSDetailViewController : UITableViewController
 @property (nonatomic,strong) NSString* systemTitle;
+@property (nonatomic,strong) UIColor* headerColor;
 @property (nonatomic,weak) IBOutlet UILabel* headerLabel;
 @end
 
