@@ -255,7 +255,14 @@ survey = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
                                                        @"imageResource":@"sad.png"
                                                        }
                                                      ]}]};
-    return info;
+//    return info;
+    
+    if (!_checklistDict) {
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"SOSPlist" ofType:@"plist"];
+        _checklistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    }
+    return _checklistDict;
+    
 }
 
 +(SOSAppDelegate*) sharedInstance {

@@ -19,6 +19,7 @@
 		24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */; };
 		24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AD182F0EC0005725B2 /* checkmark.png */; };
 		24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AE182F0EC0005725B2 /* checkmark@2x.png */; };
+		2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 		2E54E7D6182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
 		2E54E7D8182EB27700B94C7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */; };
 		2E54E7DA182EB27700B94C7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D9182EB27700B94C7C /* UIKit.framework */; };
@@ -335,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */,
 				24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */,
 				2E54E88C182F02E500B94C7C /* faint.png in Resources */,
 				2E54E88E182F02E500B94C7C /* tired.png in Resources */,

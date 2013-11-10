@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SOSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SOSAppDelegate : UIResponder <UIApplicationDelegate> {
+    NSDictionary* _checklistDict;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -23,5 +25,7 @@
 
 +(SOSAppDelegate*) sharedInstance;
 -(NSDictionary*) checklistDict ;
+
+//-(NSDictionary*) 
 
 @end
