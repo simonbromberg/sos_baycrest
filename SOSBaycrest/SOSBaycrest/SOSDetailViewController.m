@@ -297,7 +297,7 @@
             [[self recordingModalBlockingView] removeFromSuperview];
             [self setRecordingModalBlockingView:nil];
             if ([self checklistCellHavingNoteRecorded]) {
-                NSLog(@"Finished recording audio note for checklist cell %@",[[[self checklistCellHavingNoteRecorded] checklistEntry] objectForKey:@"Question"]);
+                NSLog(@"Finished recording audio note for checklist cell %@, attaching note to that item",[[[self checklistCellHavingNoteRecorded] checklistEntry] objectForKey:@"Question"]);
             }
         }
     });
@@ -318,6 +318,11 @@
 
 /* audioRecorderDidFinishRecording:successfully: is called when a recording has been finished or stopped. This method is NOT called if the recorder is stopped due to an interruption. */
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
+    
+    if ([self checklistCellHavingNoteRecorded]) {
+        NSLog(@"Finished recording audio note for checklist cell %@, attaching note to that item",[[[self checklistCellHavingNoteRecorded] checklistEntry] objectForKey:@"Question"]);
+    }
+    
     bool playWaveAfterRecording = true;
     
     if (playWaveAfterRecording) {
