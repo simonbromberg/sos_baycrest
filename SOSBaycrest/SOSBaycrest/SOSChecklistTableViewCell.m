@@ -7,6 +7,7 @@
 //
 
 #import "SOSChecklistTableViewCell.h"
+#import "SOSAppDelegate.h"
 
 @implementation SOSChecklistTableViewCell
 
@@ -146,6 +147,15 @@
         [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
         self.negativeState = !self.negativeState;
     }
+    
+    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
+    
+    
+    if (self.positiveState) {
+        [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
+    }
+    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
+    
 }
 
 - (IBAction)conditionNegativeAction:(id)sender {
@@ -160,7 +170,11 @@
         self.positiveState = !self.positiveState;
     }
     NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
-    [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
+
+
+    if (self.positiveState) {
+        [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
+    }
     NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
     
 }
@@ -175,6 +189,17 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+    }
+    
+    bool showInfo = true;
+    if (showInfo) {
+        NSDictionary* fc = [[SOSAppDelegate sharedInstance] checklistDict];
+        for(NSString* systemName in [fc keyEnumerator]) {
+            NSLog(@"System name is %@",systemName);
+            for(NSDictionary* entry in [fc objectForKey:systemName]) {
+                NSLog(@"Entry: %@; status: %@",[entry objectForKey:@"Question"],[entry objectForKey:@"Condition"]);
+            }
+        }
     }
     
 }
