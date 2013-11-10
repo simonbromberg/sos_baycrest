@@ -20,6 +20,9 @@
     return self;
 }
 
+-(void) awakeFromNib {
+    self.condition = FALSE;
+}
 - (id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -130,7 +133,21 @@
 #pragma mark custom methods
 
 - (IBAction)conditionPositiveAction:(id)sender {
-    [self slideInOut];
+    if (self.condition) {
+        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
+            [self slideInOut];
+    }
+    else [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changeactive"] forState:UIControlStateNormal];
+    self.condition = !self.condition;
+}
+
+- (IBAction)conditionNegativeAction:(id)sender {
+    if (self.condition) {
+        [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
+    }
+    else [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangeactive"] forState:UIControlStateNormal];
+    self.condition = !self.condition;
+    
 }
 - (IBAction)microphoneAction:(id)sender {
     //Not really used, button action connected to detail view controller, which launched the recorder; one recorder per checklist that way.
