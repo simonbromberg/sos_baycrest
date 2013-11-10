@@ -139,8 +139,8 @@
     }
     else {
         [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changeactive"] forState:UIControlStateNormal];
-        [self slideInOut];
     }
+    [self slideInOut];
     self.positiveState = !self.positiveState;
     
     if (self.negativeState) {
