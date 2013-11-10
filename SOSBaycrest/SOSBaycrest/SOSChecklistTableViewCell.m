@@ -133,6 +133,7 @@
     [self slideInOut];
 }
 - (IBAction)microphoneAction:(id)sender {
+    //Not really used, button action connected to detail view controller, which launched the recorder; one recorder per checklist that way.
 }
 
 

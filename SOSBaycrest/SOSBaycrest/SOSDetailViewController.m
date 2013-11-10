@@ -258,5 +258,14 @@
     NSLog(@"Failed to record note");
     [self setRecording:false];
 }
+- (IBAction)microphoneAction:(id)sender {
+    if ([self recording]) {
+        [self stopRecording:nil];
+    }
+    else {
+        [self startRecording];
+    }
+    
+}
 
 @end
