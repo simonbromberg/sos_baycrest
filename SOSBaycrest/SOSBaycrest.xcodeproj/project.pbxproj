@@ -19,6 +19,15 @@
 		24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */; };
 		24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AD182F0EC0005725B2 /* checkmark.png */; };
 		24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29AE182F0EC0005725B2 /* checkmark@2x.png */; };
+		24AE29CD182F2641005725B2 /* changeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29C5182F2641005725B2 /* changeactive.png */; };
+		24AE29CE182F2641005725B2 /* changeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29C6182F2641005725B2 /* changeactive@2x.png */; };
+		24AE29CF182F2641005725B2 /* changedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29C7182F2641005725B2 /* changedefault.png */; };
+		24AE29D0182F2641005725B2 /* changedefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29C8182F2641005725B2 /* changedefault@2x.png */; };
+		24AE29D1182F2641005725B2 /* nochangeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29C9182F2641005725B2 /* nochangeactive.png */; };
+		24AE29D2182F2641005725B2 /* nochangeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29CA182F2641005725B2 /* nochangeactive@2x.png */; };
+		24AE29D3182F2641005725B2 /* nochangedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29CB182F2641005725B2 /* nochangedefault.png */; };
+		24AE29D4182F2641005725B2 /* nochangedefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29CC182F2641005725B2 /* nochangedefault@2x.png */; };
+		24AE29D6182F2649005725B2 /* Appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29D5182F2649005725B2 /* Appicon.png */; };
 		2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 		2E54E7D6182EB27700B94C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D5182EB27700B94C7C /* Foundation.framework */; };
 		2E54E7D8182EB27700B94C7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */; };
@@ -75,6 +84,15 @@
 		24AE29A9182EF55B005725B2 /* soslaunchimage2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soslaunchimage2@2x.png"; sourceTree = "<group>"; };
 		24AE29AD182F0EC0005725B2 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		24AE29AE182F0EC0005725B2 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		24AE29C5182F2641005725B2 /* changeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeactive.png; sourceTree = "<group>"; };
+		24AE29C6182F2641005725B2 /* changeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "changeactive@2x.png"; sourceTree = "<group>"; };
+		24AE29C7182F2641005725B2 /* changedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changedefault.png; sourceTree = "<group>"; };
+		24AE29C8182F2641005725B2 /* changedefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "changedefault@2x.png"; sourceTree = "<group>"; };
+		24AE29C9182F2641005725B2 /* nochangeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nochangeactive.png; sourceTree = "<group>"; };
+		24AE29CA182F2641005725B2 /* nochangeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nochangeactive@2x.png"; sourceTree = "<group>"; };
+		24AE29CB182F2641005725B2 /* nochangedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nochangedefault.png; sourceTree = "<group>"; };
+		24AE29CC182F2641005725B2 /* nochangedefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nochangedefault@2x.png"; sourceTree = "<group>"; };
+		24AE29D5182F2649005725B2 /* Appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Appicon.png; sourceTree = "<group>"; };
 		2E54E7D2182EB27700B94C7C /* SOSBaycrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSBaycrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E54E7D5182EB27700B94C7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E54E7D7182EB27700B94C7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +156,8 @@
 		24AE29A5182EEEE2005725B2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				24AE29D5182F2649005725B2 /* Appicon.png */,
+				24AE29C4182F2641005725B2 /* buttons */,
 				2E54E87B182F02C900B94C7C /* icon_images */,
 				24AE29AD182F0EC0005725B2 /* checkmark.png */,
 				24AE29AE182F0EC0005725B2 /* checkmark@2x.png */,
@@ -151,6 +171,21 @@
 				24AE2995182ED2D9005725B2 /* Outline-body.png */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		24AE29C4182F2641005725B2 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				24AE29C5182F2641005725B2 /* changeactive.png */,
+				24AE29C6182F2641005725B2 /* changeactive@2x.png */,
+				24AE29C7182F2641005725B2 /* changedefault.png */,
+				24AE29C8182F2641005725B2 /* changedefault@2x.png */,
+				24AE29C9182F2641005725B2 /* nochangeactive.png */,
+				24AE29CA182F2641005725B2 /* nochangeactive@2x.png */,
+				24AE29CB182F2641005725B2 /* nochangedefault.png */,
+				24AE29CC182F2641005725B2 /* nochangedefault@2x.png */,
+			);
+			path = buttons;
 			sourceTree = "<group>";
 		};
 		2E54E7C9182EB27700B94C7C = {
@@ -328,26 +363,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AE29D0182F2641005725B2 /* changedefault@2x.png in Resources */,
 				2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */,
 				24AE29A4182EEED9005725B2 /* baycrestlogo@2x.png in Resources */,
 				2E54E88C182F02E500B94C7C /* faint.png in Resources */,
+				24AE29D3182F2641005725B2 /* nochangedefault.png in Resources */,
 				2E54E88E182F02E500B94C7C /* tired.png in Resources */,
 				2E54E886182F02E500B94C7C /* microphone.png in Resources */,
 				2E54E88D182F02E500B94C7C /* faint@2x.png in Resources */,
+				24AE29CE182F2641005725B2 /* changeactive@2x.png in Resources */,
 				24AE2996182ED2D9005725B2 /* Outline-body.png in Resources */,
 				24AE29A3182EEED9005725B2 /* baycrestlogo.png in Resources */,
 				2E54E88F182F02E500B94C7C /* tired@2x.png in Resources */,
+				24AE29D6182F2649005725B2 /* Appicon.png in Resources */,
 				24AE299F182EEECF005725B2 /* navarrow.png in Resources */,
 				24AE29AB182EF55B005725B2 /* soslaunchimage2.png in Resources */,
+				24AE29D2182F2641005725B2 /* nochangeactive@2x.png in Resources */,
 				2E54E888182F02E500B94C7C /* refusingcare.png in Resources */,
 				2E54E887182F02E500B94C7C /* microphone@2x.png in Resources */,
+				24AE29CF182F2641005725B2 /* changedefault.png in Resources */,
 				24AE29A0182EEECF005725B2 /* navarrow@2x.png in Resources */,
+				24AE29D1182F2641005725B2 /* nochangeactive.png in Resources */,
 				24AE29AF182F0EC0005725B2 /* checkmark.png in Resources */,
 				2E54E88A182F02E500B94C7C /* sad.png in Resources */,
 				24AE29AA182EF55B005725B2 /* soslaunchimage1.png in Resources */,
 				24AE29AC182EF55B005725B2 /* soslaunchimage2@2x.png in Resources */,
 				2E54E88B182F02E500B94C7C /* sad@2x.png in Resources */,
+				24AE29CD182F2641005725B2 /* changeactive.png in Resources */,
 				2E54E7F9182EB27700B94C7C /* Images.xcassets in Resources */,
+				24AE29D4182F2641005725B2 /* nochangedefault@2x.png in Resources */,
 				2E54E7EB182EB27700B94C7C /* Main_iPhone.storyboard in Resources */,
 				2E54E889182F02E500B94C7C /* refusingcare@2x.png in Resources */,
 				24AE29B0182F0EC0005725B2 /* checkmark@2x.png in Resources */,
