@@ -141,7 +141,7 @@
 
  */
 
--(void) startRecording {
+-(void) startRecording:(SOSChecklistTableViewCell*) checklistCell {
     
     //TODO audit this method, source:  http://stackoverflow.com/questions/1010343/how-do-i-record-audio-on-iphone-with-avaudiorecorder
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -257,7 +257,31 @@
     [recorder record];
     [self setRecording:true];
     
+    CGRect wf = self.view.window.bounds;
+    CGFloat wfh = wf.size.height;
+    CGFloat wfw = wf.size.width;
+    
+    //create the blocking (modal) view to show while recording, with a stop recording button
+    UIView* recordingScreenV = [[UIView alloc] initWithFrame:self.view.window.bounds];
+    [recordingScreenV setAlpha:0.7];
+    [recordingScreenV setBackgroundColor:[UIColor blackColor]];
+    
+    UIButton* stopRecordingButton = [[UIButton alloc] initWithFrame:CGRectMake(wfw/2-wfw*.2, wfh/2-wfh*.2, wfw*.4, wfh*.4)];
+    [stopRecordingButton setImage:[UIImage imageNamed:@"microphone.png"] forState:UIControlStateNormal];
+    [recordingScreenV addSubview:stopRecordingButton];
+    
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(stopRecording:)];
+//    [recordingScreenV addGestureRecognizer:singleFingerTap];
+    [stopRecordingButton addGestureRecognizer:singleFingerTap];
+    
+    [self setChecklistCellHavingNoteRecorded:checklistCell];
+    [self setRecordingModalBlockingView:recordingScreenV];
+    [[self view] addSubview:recordingScreenV];
+    
 }
+
 
 - (IBAction)stopRecording:(id)sender {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -268,8 +292,20 @@
         }
         else {
             NSLog(@"error: no audio recorder to stop");
-        }    });
+        }
+        if ([self recordingModalBlockingView]) {
+            [[self recordingModalBlockingView] removeFromSuperview];
+            [self setRecordingModalBlockingView:nil];
+            if ([self checklistCellHavingNoteRecorded]) {
+                NSLog(@"Finished recording audio note for checklist cell %@",[[[self checklistCellHavingNoteRecorded] checklistEntry] objectForKey:@"Question"]);
+            }
+        }
+    });
+    
+    
 }
+
+
 
 #pragma mark AVAudioRecorderDelegate methods
 
@@ -296,7 +332,11 @@
         [self stopRecording:nil];
     }
     else {
-        [self startRecording];
+
+        UIButton* cellMicrophoneButton = (UIButton*) sender;
+        //parent of button is the checklist table view cell which it is on, form which we can get the checklist item info
+        SOSChecklistTableViewCell* cell = (SOSChecklistTableViewCell*)[[[sender superview] superview] superview];
+        [self startRecording:cell];
     }
     
 }

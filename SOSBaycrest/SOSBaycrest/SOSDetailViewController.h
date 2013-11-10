@@ -26,6 +26,9 @@
 @property (nonatomic, strong) AVAudioPlayer* player;
 @property (nonatomic,unsafe_unretained) id <SOSDetailViewControllerDelegate> delegate;
 
+@property (nonatomic, strong) UIView* recordingModalBlockingView;
+@property (nonatomic, strong) SOSChecklistTableViewCell* checklistCellHavingNoteRecorded;
+
 @end
 
 @interface ConditionCell : UITableViewCell
