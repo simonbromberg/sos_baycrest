@@ -32,6 +32,7 @@
 		24AE29E4182FDD44005725B2 /* callbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E0182FDD44005725B2 /* callbutton@2x.png */; };
 		24AE29E5182FDD44005725B2 /* mailbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E1182FDD44005725B2 /* mailbutton.png */; };
 		24AE29E6182FDD44005725B2 /* mailbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AE29E2182FDD44005725B2 /* mailbutton@2x.png */; };
+		24BEA635182FDF75002BFC1C /* SOSEmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */; };
 		2E39E6D6182F246100F7F144 /* SOSPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7BB831182F041800E8DB49 /* SOSPlist.plist */; };
 		2E39E6E1182FDAEF00F7F144 /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E39E6D7182FDAEF00F7F144 /* infobutton.png */; };
 		2E39E6E2182FDAEF00F7F144 /* infobutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E39E6D8182FDAEF00F7F144 /* infobutton@2x.png */; };
@@ -111,6 +112,8 @@
 		24AE29E0182FDD44005725B2 /* callbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "callbutton@2x.png"; path = "../callbutton@2x.png"; sourceTree = "<group>"; };
 		24AE29E1182FDD44005725B2 /* mailbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mailbutton.png; path = ../mailbutton.png; sourceTree = "<group>"; };
 		24AE29E2182FDD44005725B2 /* mailbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailbutton@2x.png"; path = "../mailbutton@2x.png"; sourceTree = "<group>"; };
+		24BEA633182FDF75002BFC1C /* SOSEmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSEmergencyViewController.h; sourceTree = "<group>"; };
+		24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSEmergencyViewController.m; sourceTree = "<group>"; };
 		2E39E6D7182FDAEF00F7F144 /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = infobutton.png; path = images/infobutton.png; sourceTree = "<group>"; };
 		2E39E6D8182FDAEF00F7F144 /* infobutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "infobutton@2x.png"; path = "images/infobutton@2x.png"; sourceTree = "<group>"; };
 		2E39E6D9182FDAEF00F7F144 /* nochangedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nochangedefault.png; path = images/nochangedefault.png; sourceTree = "<group>"; };
@@ -254,15 +257,17 @@
 		2E54E7DD182EB27700B94C7C /* SOSBaycrest */ = {
 			isa = PBXGroup;
 			children = (
+				2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */,
 				2E54E878182EEAA400B94C7C /* SOSChecklistTableViewCell.h */,
 				2E54E879182EEAA400B94C7C /* SOSChecklistTableViewCell.m */,
 				2E54E7E6182EB27700B94C7C /* SOSAppDelegate.h */,
 				2E54E7E7182EB27700B94C7C /* SOSAppDelegate.m */,
-				2E54E7E9182EB27700B94C7C /* Main_iPhone.storyboard */,
 				24AE2997182EDA31005725B2 /* SOSBodyViewController.h */,
 				24AE2998182EDA31005725B2 /* SOSBodyViewController.m */,
 				24AE299A182EE1DC005725B2 /* SOSDetailViewController.h */,
 				24AE299B182EE1DC005725B2 /* SOSDetailViewController.m */,
+				24BEA633182FDF75002BFC1C /* SOSEmergencyViewController.h */,
+				24BEA634182FDF75002BFC1C /* SOSEmergencyViewController.m */,
 				2E54E7F8182EB27700B94C7C /* Images.xcassets */,
 				2E54E7EF182EB27700B94C7C /* SOSBaycrest.xcdatamodeld */,
 				2E54E7DE182EB27700B94C7C /* Supporting Files */,
@@ -473,6 +478,7 @@
 			files = (
 				24AE2999182EDA31005725B2 /* SOSBodyViewController.m in Sources */,
 				24AE299C182EE1DC005725B2 /* SOSDetailViewController.m in Sources */,
+				24BEA635182FDF75002BFC1C /* SOSEmergencyViewController.m in Sources */,
 				2E54E7E8182EB27700B94C7C /* SOSAppDelegate.m in Sources */,
 				2E54E7E4182EB27700B94C7C /* main.m in Sources */,
 				2E54E7F1182EB27700B94C7C /* SOSBaycrest.xcdatamodeld in Sources */,

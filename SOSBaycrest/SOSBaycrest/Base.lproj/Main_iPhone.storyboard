@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--View Controller-->
+        <!--Emergency View Controller-->
         <scene sceneID="uDU-jd-oLM">
             <objects>
-                <viewController id="PE2-Oh-1bN" sceneMemberID="viewController">
+                <viewController id="PE2-Oh-1bN" customClass="SOSEmergencyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xBF-gD-M5N"/>
                         <viewControllerLayoutGuide type="bottom" id="DKZ-t2-6cw"/>
@@ -32,31 +32,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact your medical supervisor immediately" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="wDn-xG-KE0">
-                                <rect key="frame" x="20" y="20" width="280" height="60"/>
+                                <rect key="frame" x="20" y="60" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" red="0.80784313725490198" green="0.23137254901960785" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-7I-0fd">
-                                <rect key="frame" x="20" y="392" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-7I-0fd">
+                                <rect key="frame" x="20" y="378" width="120" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="callbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZW-mK-g7x">
-                                <rect key="frame" x="254" y="392" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZW-mK-g7x">
+                                <rect key="frame" x="180" y="378" width="120" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="mailbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dSD-7I-0fd" firstAttribute="leading" secondItem="wDn-xG-KE0" secondAttribute="leading" id="A0d-RL-ATM"/>
                             <constraint firstAttribute="trailing" secondItem="wDn-xG-KE0" secondAttribute="trailing" constant="20" symbolic="YES" id="aeA-WH-eHP"/>
-                            <constraint firstItem="wDn-xG-KE0" firstAttribute="top" secondItem="xBF-gD-M5N" secondAttribute="bottom" constant="20" id="dU0-iJ-Jle"/>
+                            <constraint firstItem="DKZ-t2-6cw" firstAttribute="top" secondItem="dSD-7I-0fd" secondAttribute="bottom" constant="70" id="c0N-mS-Dya"/>
+                            <constraint firstItem="wDn-xG-KE0" firstAttribute="top" secondItem="xBF-gD-M5N" secondAttribute="bottom" constant="60" id="dU0-iJ-Jle"/>
+                            <constraint firstItem="dSD-7I-0fd" firstAttribute="centerY" secondItem="wZW-mK-g7x" secondAttribute="centerY" id="ges-ct-mlQ"/>
+                            <constraint firstItem="wZW-mK-g7x" firstAttribute="leading" secondItem="dSD-7I-0fd" secondAttribute="trailing" constant="40" id="mQp-Bi-rnn"/>
                             <constraint firstItem="wDn-xG-KE0" firstAttribute="leading" secondItem="cp8-wJ-rk3" secondAttribute="leading" constant="20" symbolic="YES" id="ne9-S6-c6S"/>
                         </constraints>
                     </view>
@@ -258,7 +262,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="callbutton.png" width="120" height="56"/>
         <image name="changedefault.png" width="135" height="41"/>
+        <image name="mailbutton.png" width="120" height="56"/>
         <image name="microphone.png" width="57" height="57"/>
         <image name="nochangedefault.png" width="135" height="41"/>
     </resources>
