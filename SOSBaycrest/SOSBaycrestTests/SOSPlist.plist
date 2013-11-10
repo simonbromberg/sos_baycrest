@@ -10,7 +10,7 @@
 			<key>Question</key>
 			<string>One Sided Weakness</string>
 			<key>Image</key>
-			<string>refusingcare.png</string>
+			<string>onesideweakness.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -20,7 +20,7 @@
 			<key>Question</key>
 			<string>Muscle Strength Decline?</string>
 			<key>Image</key>
-			<string>tired.png</string>
+			<string>musclestrength.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -28,7 +28,7 @@
 			<key>Question</key>
 			<string>Change In Balance?</string>
 			<key>Image</key>
-			<string>faint.png</string>
+			<string>balance.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -36,7 +36,7 @@
 			<key>Question</key>
 			<string>Increased Rigity?</string>
 			<key>Image</key>
-			<string>sad.png</string>
+			<string>rigid.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -44,7 +44,7 @@
 			<key>Question</key>
 			<string>Increased Tremors</string>
 			<key>Image</key>
-			<string>refusingcare.png</string>
+			<string>tremor.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -94,7 +94,7 @@
 			<key>Question</key>
 			<string>Sudden Numbness?</string>
 			<key>Image</key>
-			<string>refusingcare.png</string>
+			<string>numbness.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>
@@ -107,7 +107,7 @@
 			<key>Question</key>
 			<string>Speech Concerns?</string>
 			<key>Image</key>
-			<string>refusingcare.png</string>
+			<string>mouth.png</string>
 			<key>Answer</key>
 			<string>no</string>
 		</dict>

@@ -323,6 +323,9 @@
         NSLog(@"Finished recording audio note for checklist cell %@, attaching note to that item",[[[self checklistCellHavingNoteRecorded] checklistEntry] objectForKey:@"Question"]);
         [[[self checklistCellHavingNoteRecorded] checklistEntry] setObject:[recorder url] forKey:@"AudioNote"];
     }
+    [[[self checklistCellHavingNoteRecorded] microphoneButton] setImage:[UIImage imageNamed:@"miccheckmark.png"] forState:UIControlStateNormal];
+    [[[self checklistCellHavingNoteRecorded] microphoneButton] setEnabled:false];
+    
     
     bool playWaveAfterRecording = true;
     
