@@ -156,7 +156,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja" userLabel="conditionLabel">
                                             <rect key="frame" x="20" y="11" width="171" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
@@ -166,7 +166,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY" userLabel="iconImage">
                                             <rect key="frame" x="20" y="40" width="67" height="67"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
@@ -174,7 +174,7 @@
                                                 <constraint firstAttribute="width" constant="67" id="tWW-LO-YNm"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE" userLabel="changeButton">
                                             <rect key="frame" x="199" y="11" width="106" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="changedefault.png">
@@ -184,7 +184,7 @@
                                                 <action selector="conditionPositiveAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="lRs-7N-RO0"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi" userLabel="noChangeButton">
                                             <rect key="frame" x="199" y="60" width="106" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="nochangedefault.png">
@@ -194,9 +194,13 @@
                                                 <action selector="conditionNegativeAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="UYI-EP-a4t"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-IO-iMQ">
-                                            <rect key="frame" x="325" y="36" width="66" height="57"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-IO-iMQ" userLabel="microphoneButton">
+                                            <rect key="frame" x="334" y="36" width="57" height="57"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="k3d-GI-4aX"/>
+                                                <constraint firstAttribute="height" constant="57" id="zWK-vy-5LM"/>
+                                            </constraints>
                                             <state key="normal" image="microphone.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -205,7 +209,7 @@
                                                 <action selector="microphoneAction:" destination="92N-LQ-Edn" eventType="touchUpInside" id="fRd-vK-80n"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-3s-pF7">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-3s-pF7" userLabel="infoButton">
                                             <rect key="frame" x="130" y="60" width="22" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -218,16 +222,14 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="8" id="01Z-MH-n1B"/>
                                         <constraint firstItem="JT0-J8-aja" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="11" id="2um-GJ-c9o"/>
                                         <constraint firstItem="VvL-tH-szY" firstAttribute="top" secondItem="JT0-J8-aja" secondAttribute="bottom" constant="8" symbolic="YES" id="7oH-w3-lpd"/>
+                                        <constraint firstItem="Xuh-IO-iMQ" firstAttribute="leading" secondItem="aGd-LY-nmi" secondAttribute="trailing" constant="29" id="PSC-fD-Av6"/>
                                         <constraint firstItem="aGd-LY-nmi" firstAttribute="top" secondItem="aWS-Dm-LhE" secondAttribute="bottom" constant="8" symbolic="YES" id="Q0X-CW-9s1"/>
                                         <constraint firstAttribute="bottom" secondItem="VvL-tH-szY" secondAttribute="bottom" constant="6" id="WS9-ph-KRv"/>
                                         <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="VvL-tH-szY" secondAttribute="leading" id="Z3F-2r-42f"/>
                                         <constraint firstItem="aGd-LY-nmi" firstAttribute="trailing" secondItem="aWS-Dm-LhE" secondAttribute="trailing" id="dS1-lx-me9"/>
                                         <constraint firstItem="aWS-Dm-LhE" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="11" id="dqD-uq-i7H"/>
-                                        <constraint firstAttribute="trailing" secondItem="aGd-LY-nmi" secondAttribute="trailing" constant="15" id="jlS-sx-cuE"/>
-                                        <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="aeH-W0-7GD" secondAttribute="leading" constant="20" symbolic="YES" id="m2p-eB-yDr"/>
                                         <constraint firstItem="aGd-LY-nmi" firstAttribute="leading" secondItem="aWS-Dm-LhE" secondAttribute="leading" id="ygl-KZ-VqN"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -263,10 +265,10 @@
     </scenes>
     <resources>
         <image name="callbutton.png" width="120" height="56"/>
-        <image name="changedefault.png" width="135" height="41"/>
+        <image name="changedefault.png" width="106" height="41"/>
         <image name="mailbutton.png" width="120" height="56"/>
         <image name="microphone.png" width="57" height="57"/>
-        <image name="nochangedefault.png" width="135" height="41"/>
+        <image name="nochangedefault.png" width="106" height="41"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
