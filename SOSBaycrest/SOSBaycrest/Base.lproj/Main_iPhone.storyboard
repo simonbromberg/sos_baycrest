@@ -74,7 +74,7 @@
         <scene sceneID="Iwf-d5-gQO">
             <objects>
                 <tableViewController id="92N-LQ-Edn" customClass="SOSDetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEr-Hd-U6A">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEr-Hd-U6A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,25 +98,32 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="128" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
-                                <rect key="frame" x="0.0" y="111" width="320" height="128"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="114" id="Zlt-aH-fAy" customClass="SOSChecklistTableViewCell">
+                                <rect key="frame" x="0.0" y="111" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zlt-aH-fAy" id="aeH-W0-7GD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
                                             <rect key="frame" x="20" y="11" width="109" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="iyB-ed-Lft"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-tH-szY">
                                             <rect key="frame" x="20" y="40" width="67" height="67"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="67" id="J7D-Dt-wLV"/>
+                                                <constraint firstAttribute="width" constant="67" id="tWW-LO-YNm"/>
+                                            </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
                                             <rect key="frame" x="212" y="20" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Yes">
@@ -126,7 +133,7 @@
                                                 <action selector="conditionPositiveAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="lRs-7N-RO0"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
                                             <rect key="frame" x="212" y="72" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="No">
@@ -134,6 +141,17 @@
                                             </state>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="83" id="01Z-MH-n1B"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="11" id="2um-GJ-c9o"/>
+                                        <constraint firstItem="VvL-tH-szY" firstAttribute="top" secondItem="JT0-J8-aja" secondAttribute="bottom" constant="8" symbolic="YES" id="7oH-w3-lpd"/>
+                                        <constraint firstItem="aGd-LY-nmi" firstAttribute="top" secondItem="aWS-Dm-LhE" secondAttribute="bottom" constant="22" id="AMZ-i8-PIG"/>
+                                        <constraint firstAttribute="bottom" secondItem="VvL-tH-szY" secondAttribute="bottom" constant="6" id="WS9-ph-KRv"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="VvL-tH-szY" secondAttribute="leading" id="Z3F-2r-42f"/>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="20" symbolic="YES" id="dqD-uq-i7H"/>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="aGd-LY-nmi" secondAttribute="leading" id="ePY-fD-641"/>
+                                        <constraint firstItem="JT0-J8-aja" firstAttribute="leading" secondItem="aeH-W0-7GD" secondAttribute="leading" constant="20" symbolic="YES" id="m2p-eB-yDr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="conditionIcon" destination="VvL-tH-szY" id="mlh-ln-Nwg"/>
