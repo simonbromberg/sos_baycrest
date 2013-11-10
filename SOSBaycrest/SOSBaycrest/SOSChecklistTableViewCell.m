@@ -172,6 +172,7 @@
     if (condition == [NSNull null] || condition == nil) {
         self.noChangeButtonIsActive = FALSE;
         self.changeButtonIsActive = FALSE;
+        [self setButtonsToDefault];
     }
     else {
         BOOL bCondition = [(NSNumber*) condition boolValue];
@@ -182,6 +183,12 @@
             [self toggleChangeButton];
         }
     }
+}
+
+-(void) setButtonsToDefault {
+    [self.changeButton setImage:[UIImage imageNamed:@"changeDefault"] forState:UIControlStateNormal];
+    [self.noChangeButton setImage:[UIImage imageNamed:@"noChangeDefault"] forState:UIControlStateNormal];
+    
 }
 
 -(void) toggleChangeButton {
@@ -224,6 +231,7 @@
     if (self.changeButtonIsActive) {
         [self toggleChangeButton];
     }
+    [self updateChecklistEntry];
 }
 
 - (IBAction)microphoneAction:(id)sender {

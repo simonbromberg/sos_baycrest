@@ -73,7 +73,7 @@
     
 //    ci = ci[@"SensorySystem"][[indexPath item] ];
     NSMutableDictionary* ci = [self.checklists objectAtIndex:indexPath.row];
-    
+    NSLog(@"%d: %@",indexPath.row, ci.description);
     
     [[cell conditionLabel] setText:ci[@"Question"]];
     
@@ -91,6 +91,10 @@
 -(void) checklistCellEntryUpdated:(SOSChecklistTableViewCell *)cell {
     NSInteger index = cell.rowIndex;
     [self.checklists replaceObjectAtIndex:index withObject:cell.checklistEntry];
+    
+    if ([[cell checklistEntry] objectForKey:@"Urgent"]) {
+        [self performSegueWithIdentifier:@"Emergency" sender:cell];
+    }
 }
 
 
@@ -308,12 +312,6 @@
         [self startRecording:cell];
     }
     
-}
-- (IBAction)changeButtonPressed:(id)sender {
-    SOSChecklistTableViewCell* cell = (SOSChecklistTableViewCell*)[[[sender superview] superview] superview];
-    if ([[cell checklistEntry] objectForKey:@"Urgent"]) {
-        [self performSegueWithIdentifier:@"Emergency" sender:cell];
-    }
 }
 
 
