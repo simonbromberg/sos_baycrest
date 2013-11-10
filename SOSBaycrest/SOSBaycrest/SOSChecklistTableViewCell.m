@@ -22,7 +22,8 @@
 }
 
 -(void) awakeFromNib {
-    self.condition = FALSE;
+    self.noChangeButtonIsActive = FALSE;
+    self.changeButtonIsActive = FALSE;
 }
 - (id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -173,7 +174,7 @@
 }
 
 -(void) toggleNoChangeButton {
-    NSString* buttonImage = self.changeButtonIsActive ? @"changeactive" : @"changedefault";
+    NSString* buttonImage = self.changeButtonIsActive ? @"nochangeactive" : @"nochangedefault";
     [self.noChangeButton setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
     
     
