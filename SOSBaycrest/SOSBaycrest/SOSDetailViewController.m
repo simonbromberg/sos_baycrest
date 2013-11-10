@@ -71,6 +71,8 @@
     NSDictionary* entry = entries[[indexPath item]];
     [[cell conditionLabel] setText:entry[@"label"]];
     
+    [[cell conditionIcon] setImage:[UIImage imageNamed:entry[@"imageResource"]]];
+    
     
     
     

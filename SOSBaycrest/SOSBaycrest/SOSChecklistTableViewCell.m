@@ -42,10 +42,10 @@
 //        [self addSubview:_mainContentView];
 //        [self addSubview:_sideContentView];
         
-        UITapGestureRecognizer *singleFingerTap =
-        [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                action:@selector(slideInOut)];
-        [self addGestureRecognizer:singleFingerTap];
+//        UITapGestureRecognizer *singleFingerTap =
+//        [[UITapGestureRecognizer alloc] initWithTarget:self
+//                                                action:@selector(slideInOut)];
+//        [self addGestureRecognizer:singleFingerTap];
         
     }
     return self;

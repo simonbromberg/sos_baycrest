@@ -165,13 +165,13 @@
 //                                                       }]}]};
     NSDictionary* info = @{@"Defs": @[@{@"title":@"Neurological System",
                                         @"entries":@[@{@"label":@"Tired?",
-                                                       @"imageResource":@"bleh.png"
+                                                       @"imageResource":@"tired.png"
                                                        },
                                                      @{@"label":@"Faint?",
-                                                       @"imageResource":@"bleh.png"
+                                                       @"imageResource":@"faint.png"
                                                        },
                                                      @{@"label":@"Sad?",
-                                                       @"imageResource":@"bleh.png"
+                                                       @"imageResource":@"sad.png"
                                                        }
                                                      ]}]};
     return info;
