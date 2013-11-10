@@ -305,6 +305,13 @@
     
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self audioRecorder] && [[ self audioRecorder] isRecording]) {
+        //ensure we kill any recording settions
+        [[self audioRecorder] stop];
+    }
+}
+
 
 
 #pragma mark AVAudioRecorderDelegate methods
