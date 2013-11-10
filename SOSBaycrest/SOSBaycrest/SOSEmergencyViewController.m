@@ -9,14 +9,20 @@
 #import <MessageUI/MessageUI.h>
 
 @implementation SOSEmergencyViewController
-
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
+}
 - (IBAction)callPressed {
     //TODO: add phone number in settings?
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:4160000000"]];
 }
 
 - (IBAction)mailButtonPressed {
-    [self displayMailComposerSheet];
+    if ([MFMailComposeViewController canSendMail]) {
+        [self displayMailComposerSheet];
+    }
+
 }
 
 - (void)displayMailComposerSheet
@@ -35,15 +41,16 @@
     [picker setCcRecipients:ccRecipients];
     [picker setBccRecipients:bccRecipients];
     
-    // Attach an image to the email
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"jpg"];
-    NSData *myData = [NSData dataWithContentsOfFile:path];
-    [picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"rainy"];
+    // Attach audio
     
     // Fill out the email body text
-    NSString *emailBody = @"It is raining in sunny California!";
+    NSString *emailBody = @"This is the emergency description";
     [picker setMessageBody:emailBody isHTML:NO];
     
     [self presentViewController:picker animated:YES completion:NULL];
+}
+
+-(void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 @end
