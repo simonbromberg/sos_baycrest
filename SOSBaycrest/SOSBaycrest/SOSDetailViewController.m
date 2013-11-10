@@ -76,9 +76,13 @@
 //    ci = ci[@"SensorySystem"][[indexPath item] ];
     ci = ci[self.systemTitle][[indexPath item] ];
     
+    
     [[cell conditionLabel] setText:ci[@"Question"]];
     
     [[cell conditionIcon] setImage:[UIImage imageNamed:ci[@"Image"]]];
+    
+    
+    [cell setChecklistEntry:ci];
     
     
     

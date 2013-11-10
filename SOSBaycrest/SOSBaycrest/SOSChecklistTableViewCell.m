@@ -159,6 +159,9 @@
         [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
         self.positiveState = !self.positiveState;
     }
+    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
+    [[self checklistEntry] setObject:@TRUE forKey:@"Condition"];
+    NSLog(@"Checklist entry value is now %@",[[self checklistEntry] objectForKey:@"Condition" ]);
     
 }
 - (IBAction)microphoneAction:(id)sender {

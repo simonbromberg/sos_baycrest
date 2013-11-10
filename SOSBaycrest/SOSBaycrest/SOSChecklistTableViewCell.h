@@ -21,6 +21,8 @@
 @property (nonatomic,assign) BOOL positiveState;
 @property (nonatomic,assign) BOOL negativeState;
 
+@property (nonatomic,strong) NSMutableDictionary* checklistEntry;
+
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *conditionPositiveButton;
 @property (weak, nonatomic) IBOutlet UIButton *conditionNegativeButton;
