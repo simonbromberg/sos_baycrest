@@ -19,8 +19,9 @@
     if(!_issueItems) {
         _issueItems = [[NSMutableArray alloc] init];
         NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
-        
+        _issueSectionNames = [[NSMutableArray alloc] init];
         bool groupItems = false;
+        groupItems = true;
         if (groupItems) {
             for(NSString* systemName in [ci keyEnumerator]) {
                 NSMutableArray* checkedSystemItems = [[NSMutableArray alloc] init];
@@ -32,7 +33,9 @@
                     }
                 }
                 if ([checkedSystemItems count]>0) {
+                    [_issueSectionNames addObject:systemName];
                     [_issueItems addObject:checkedSystemItems];
+                    
                 }
                 
             }
@@ -94,6 +97,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+    return [[self issueItems] count];
     return 1;
 }
 
@@ -102,6 +106,8 @@
 
     // Return the number of rows in the section.
 //    NSLog(@"number of issue items %u",[[se lf issueItems] count]);
+        return [[[self issueItems] objectAtIndex:section] count];
+    
     return [[self issueItems] count];
     
     
@@ -114,17 +120,23 @@
     SOSSummaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary* itemInfo = [[self issueItems] objectAtIndex:[indexPath item]];
+//    NSDictionary* itemInfo = [[self issueItems] objectAtIndex:[indexPath item]];
+    NSDictionary* itemInfo = [[[self issueItems] objectAtIndex:[indexPath section]] objectAtIndex:[indexPath item]];
     
     NSString* question = [itemInfo objectForKey:@"Question"];
     
 //    [cell setItemName:question];
+    
     [[cell itemName] setText:question];
     if ([itemInfo objectForKey:@"AudioNote"]) {
         [cell setAudioNote:[itemInfo objectForKey:@"AudioNote"]];
     }
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [_issueSectionNames objectAtIndex:section];
 }
 
 /*

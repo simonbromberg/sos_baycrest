@@ -11,6 +11,7 @@
 
 @interface SOSSummaryTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate> {
     NSMutableArray* _issueItems;
+    NSMutableArray* _issueSectionNames;
 }
 
 @property (nonatomic, strong) NSArray* issueItems;
