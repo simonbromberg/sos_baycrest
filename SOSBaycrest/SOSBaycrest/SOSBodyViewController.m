@@ -41,7 +41,7 @@ bool highContrastLowDistractionMode = true;
 
 - (void)viewDidLoad
 {
-//    highContrastLowDistractionMode = false;
+    highContrastLowDistractionMode = false;
     [super viewDidLoad];
     
     self.navigationController.navigationBar.barTintColor = rgba(0, 200, 230,1.0);

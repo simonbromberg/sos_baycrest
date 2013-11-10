@@ -87,6 +87,18 @@
 	<key>Neurological System</key>
 	<array>
 		<dict>
+			<key>Urgent</key>
+			<true/>
+			<key>Question</key>
+			<string>Sudden Numbness?</string>
+			<key>Image</key>
+			<string>refusingcare.png</string>
+			<key>Answer</key>
+			<string>no</string>
+		</dict>
+		<dict>
+			<key>Urgent</key>
+			<true/>
 			<key>Question</key>
 			<string>Speech Concerns?</string>
 			<key>Image</key>
