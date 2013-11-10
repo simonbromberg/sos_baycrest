@@ -133,20 +133,32 @@
 #pragma mark custom methods
 
 - (IBAction)conditionPositiveAction:(id)sender {
-    if (self.condition) {
+    if (self.positiveState) {
         [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
-            [self slideInOut];
     }
-    else [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changeactive"] forState:UIControlStateNormal];
-    self.condition = !self.condition;
+    else {
+        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changeactive"] forState:UIControlStateNormal];
+        [self slideInOut];
+    }
+    self.positiveState = !self.positiveState;
+    
+    if (self.negativeState) {
+        [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
+        self.negativeState = !self.negativeState;
+    }
 }
 
 - (IBAction)conditionNegativeAction:(id)sender {
-    if (self.condition) {
+    if (self.negativeState) {
         [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangedefault"] forState:UIControlStateNormal];
     }
     else [self.conditionNegativeButton setImage:[UIImage imageNamed:@"nochangeactive"] forState:UIControlStateNormal];
-    self.condition = !self.condition;
+    self.negativeState = !self.negativeState;
+    
+    if (self.positiveState) {
+        [self.conditionPositiveButton setImage:[UIImage imageNamed:@"changedefault"] forState:UIControlStateNormal];
+        self.positiveState = !self.positiveState;
+    }
     
 }
 - (IBAction)microphoneAction:(id)sender {
