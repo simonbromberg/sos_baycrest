@@ -154,6 +154,17 @@
                                                 <action selector="microphoneAction:" destination="92N-LQ-Edn" eventType="touchUpInside" id="fRd-vK-80n"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-3s-pF7">
+                                            <rect key="frame" x="130" y="60" width="22" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="infoAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="1kk-S4-Svc"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="8" id="01Z-MH-n1B"/>
