@@ -37,8 +37,11 @@ UIColor* rgba(float r,float g, float b, float a) {
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
 }
 
+bool highContrastLowDistractionMode = true;
+
 - (void)viewDidLoad
 {
+//    highContrastLowDistractionMode = false;
     [super viewDidLoad];
     
     self.navigationController.navigationBar.barTintColor = rgba(0, 200, 230,1.0);
@@ -48,7 +51,15 @@ UIColor* rgba(float r,float g, float b, float a) {
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
     self.labels = [NSArray arrayWithObjects:@"Neurological System",@"Sensory System", @"Respiratory System", @"Cardiovascular System", @"Integumentary System", @"Gastrointestinal System", @"Genitourinary System", @"Musculoskeletal System", @"Function", nil];
     
-    self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(114,228,203),rgb(106,174,102),rgb(222,111,56),nil];
+
+    if (highContrastLowDistractionMode) {
+        self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(114,228,203),rgb(106,174,102),rgb(222,111,56),nil];
+        
+    }
+    else {
+        self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(114,228,203),rgb(106,174,102),rgb(222,111,56),nil];
+        
+    }
     
     NSInteger numSystems = self.labels.count;
     self.completedSystems = [NSMutableArray arrayWithCapacity:numSystems];
@@ -70,7 +81,18 @@ UIColor* rgba(float r,float g, float b, float a) {
     
     cell.label.text = [self.labels objectAtIndex: row];
     cell.label.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [self.colors objectAtIndex:row];
+    
+    if (highContrastLowDistractionMode) {
+        cell.backgroundColor = [UIColor whiteColor];
+        cell.label.textColor =[UIColor blackColor];
+
+        [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    }
+    else {
+        cell.backgroundColor = [self.colors objectAtIndex:row];
+    }
+    
+
     
     NSString* imageName = [self.completedSystems[row] boolValue] ? @"checkmark" : @"navarrow";
     UIImage* image = [UIImage imageNamed:imageName];

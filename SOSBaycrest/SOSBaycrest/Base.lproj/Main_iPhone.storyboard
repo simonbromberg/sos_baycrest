@@ -106,10 +106,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-J8-aja">
-                                            <rect key="frame" x="20" y="11" width="109" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="142" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="109" id="iyB-ed-Lft"/>
+                                                <constraint firstAttribute="width" constant="142" id="iyB-ed-Lft"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -123,8 +123,8 @@
                                                 <constraint firstAttribute="width" constant="67" id="tWW-LO-YNm"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
-                                            <rect key="frame" x="165" y="11" width="135" height="41"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Dm-LhE">
+                                            <rect key="frame" x="170" y="11" width="135" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="changedefault.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,8 +133,8 @@
                                                 <action selector="conditionPositiveAction:" destination="Zlt-aH-fAy" eventType="touchUpInside" id="lRs-7N-RO0"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
-                                            <rect key="frame" x="165" y="60" width="135" height="41"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-LY-nmi">
+                                            <rect key="frame" x="170" y="60" width="135" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="nochangedefault.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,7 +156,7 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="-3" id="01Z-MH-n1B"/>
+                                        <constraint firstItem="aWS-Dm-LhE" firstAttribute="leading" secondItem="JT0-J8-aja" secondAttribute="trailing" constant="8" id="01Z-MH-n1B"/>
                                         <constraint firstItem="JT0-J8-aja" firstAttribute="top" secondItem="aeH-W0-7GD" secondAttribute="top" constant="11" id="2um-GJ-c9o"/>
                                         <constraint firstItem="VvL-tH-szY" firstAttribute="top" secondItem="JT0-J8-aja" secondAttribute="bottom" constant="8" symbolic="YES" id="7oH-w3-lpd"/>
                                         <constraint firstItem="aGd-LY-nmi" firstAttribute="top" secondItem="aWS-Dm-LhE" secondAttribute="bottom" constant="8" id="AMZ-i8-PIG"/>
