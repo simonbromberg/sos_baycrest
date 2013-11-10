@@ -41,7 +41,6 @@ UIColor* rgba(float r,float g, float b, float a) {
     [super viewDidLoad];
     
     self.navigationController.navigationBar.barTintColor = rgba(0, 200, 230,1.0);
-//    self.navigationController.navigationBar.backgroundColor = rgba(0, 200, 230,1.0);
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
