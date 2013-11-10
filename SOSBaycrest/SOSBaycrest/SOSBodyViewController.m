@@ -48,7 +48,7 @@ UIColor* rgba(float r,float g, float b, float a) {
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"baycrestlogo"]];
     self.labels = [NSArray arrayWithObjects:@"Neurological System",@"Sensory System", @"Respiratory System", @"Cardiovascular System", @"Intergumentary System", @"Gastrointestinal System", @"Genitourinary System", @"Musculoskeletal System", @"Function", nil];
     
-    self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(122,0,255),rgb(105,201,21),rgb(222,180,56),nil];
+    self.colors = [NSArray arrayWithObjects: rgb(92,191,176), rgb(246,0,111),rgb(30,44,147),rgb(200,47,53),rgb(255,116,37),rgb(81,148,171),rgb(114,228,203),rgb(106,174,102),rgb(222,111,56),nil];
     
     NSInteger numSystems = self.labels.count;
     self.completedSystems = [NSMutableArray arrayWithCapacity:numSystems];
