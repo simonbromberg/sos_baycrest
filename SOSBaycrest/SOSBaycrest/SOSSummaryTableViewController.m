@@ -20,19 +20,39 @@
         _issueItems = [[NSMutableArray alloc] init];
         NSDictionary* ci = [[SOSAppDelegate sharedInstance] checklistDict];
         
-        for(NSString* systemName in [ci keyEnumerator]) {
-            NSMutableArray* checkedSystemItems = [[NSMutableArray alloc] init];
-            NSArray* systemItems = [ci objectForKey:systemName];
-            for(NSDictionary* item in systemItems) {
-                if ([item objectForKey:@"Condition"] && [[item objectForKey:@"Condition"]  isEqual: @YES]) {
-                    NSLog(@"Condition item is true");
-                    [checkedSystemItems addObject:item];
+        bool groupItems = false;
+        if (groupItems) {
+            for(NSString* systemName in [ci keyEnumerator]) {
+                NSMutableArray* checkedSystemItems = [[NSMutableArray alloc] init];
+                NSArray* systemItems = [ci objectForKey:systemName];
+                for(NSDictionary* item in systemItems) {
+                    if ([item objectForKey:@"Condition"] && [[item objectForKey:@"Condition"]  isEqual: @YES]) {
+                        NSLog(@"Condition item is true");
+                        [checkedSystemItems addObject:item];
+                    }
                 }
+                if ([checkedSystemItems count]>0) {
+                    [_issueItems addObject:checkedSystemItems];
+                }
+                
             }
-            if ([checkedSystemItems count]>0) {
-                [_issueItems addObject:checkedSystemItems];
+        }
+        else {
+            for(NSString* systemName in [ci keyEnumerator]) {
+                NSMutableArray* checkedSystemItems = [[NSMutableArray alloc] init];
+                NSArray* systemItems = [ci objectForKey:systemName];
+                for(NSDictionary* item in systemItems) {
+                    if ([item objectForKey:@"Condition"] && [[item objectForKey:@"Condition"]  isEqual: @YES]) {
+                        NSLog(@"Condition item is true");
+                        [checkedSystemItems addObject:item];
+                    }
+                }
+                if ([checkedSystemItems count]>0) {
+//                    [_issueItems addObject:checkedSystemItems];
+                    [_issueItems addObjectsFromArray:checkedSystemItems];
+                }
+                
             }
-            
         }
     }
     
@@ -83,15 +103,26 @@
     // Return the number of rows in the section.
 //    NSLog(@"number of issue items %u",[[se lf issueItems] count]);
     return [[self issueItems] count];
+    
+    
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    SOSSummaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSDictionary* itemInfo = [[self issueItems] objectAtIndex:[indexPath item]];
+    
+    NSString* question = [itemInfo objectForKey:@"Question"];
+    
+//    [cell setItemName:question];
+    [[cell itemName] setText:question];
+    if ([itemInfo objectForKey:@"AudioNote"]) {
+        [cell setAudioNote:[itemInfo objectForKey:@"AudioNote"]];
+    }
     
     return cell;
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SOSSummaryTableViewCell.h"
 
 @interface SOSSummaryTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate> {
     NSMutableArray* _issueItems;
