@@ -131,6 +131,9 @@
     if ([itemInfo objectForKey:@"AudioNote"]) {
         [cell setAudioNote:[itemInfo objectForKey:@"AudioNote"]];
     }
+    else {
+        [[cell playAudioNoteButton] setEnabled:false];
+    }
     
     return cell;
 }

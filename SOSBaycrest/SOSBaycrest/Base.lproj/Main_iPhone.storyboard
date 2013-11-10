@@ -301,7 +301,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-K6-mhP">
-                                            <rect key="frame" x="20" y="27" width="92" height="21"/>
+                                            <rect key="frame" x="15" y="15" width="126" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -331,6 +331,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="itemName" destination="JBW-K6-mhP" id="Vyq-r5-xeq"/>
+                                    <outlet property="playAudioNoteButton" destination="kTc-le-E8J" id="tdM-Fp-QCL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

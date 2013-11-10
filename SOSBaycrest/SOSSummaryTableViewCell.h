@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemName;
 @property (strong, nonatomic) NSURL* audioNote;
 @property (nonatomic, strong) AVAudioPlayer* player;
+@property (weak, nonatomic) IBOutlet UIButton *playAudioNoteButton;
 
 @end
