@@ -55,7 +55,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="mailButton" destination="PE2-Oh-1bN" eventType="touchUpInside" id="1Fd-Xb-l6L"/>
                                     <action selector="mailButtonPressed" destination="PE2-Oh-1bN" eventType="touchUpInside" id="wOz-b3-kKg"/>
                                 </connections>
                             </button>
