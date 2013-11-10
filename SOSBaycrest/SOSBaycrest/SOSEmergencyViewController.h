@@ -6,7 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SOSEmergencyViewController : UIViewController
+@interface SOSEmergencyViewController : UIViewController <MFMailComposeViewControllerDelegate>
+- (IBAction)callPressed;
+- (IBAction)mailButtonPressed;
 
 @end

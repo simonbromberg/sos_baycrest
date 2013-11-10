@@ -44,6 +44,9 @@
                                 <state key="normal" image="callbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="callPressed" destination="PE2-Oh-1bN" eventType="touchUpInside" id="nPT-F9-GAs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZW-mK-g7x">
                                 <rect key="frame" x="180" y="378" width="120" height="56"/>
@@ -51,6 +54,10 @@
                                 <state key="normal" image="mailbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mailButton" destination="PE2-Oh-1bN" eventType="touchUpInside" id="1Fd-Xb-l6L"/>
+                                    <action selector="mailButtonPressed" destination="PE2-Oh-1bN" eventType="touchUpInside" id="wOz-b3-kKg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -104,7 +111,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="pRg-9E-ovV" id="vNG-9c-HhX"/>
-                                    <segue destination="92N-LQ-Edn" kind="push" id="7di-wM-frd"/>
+                                    <segue destination="92N-LQ-Edn" kind="push" identifier="BodyToDetailSegue" id="7di-wM-frd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -119,14 +119,16 @@ bool highContrastLowDistractionMode = true;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    SOSDetailViewController* detailVC =  (SOSDetailViewController*)segue.destinationViewController;
-    NSIndexPath* selectedRowIndexPath = [self.tableView indexPathForSelectedRow];
-    NSInteger selectedRowIndex = [selectedRowIndexPath row];
-    [self.tableView deselectRowAtIndexPath:selectedRowIndexPath animated:YES];
-    detailVC.systemTitle = [self.labels objectAtIndex:selectedRowIndex];
-    detailVC.headerColor = [self.colors objectAtIndex:selectedRowIndex];
-    detailVC.systemIndex = selectedRowIndex;
-    detailVC.delegate = self;
+    if ([segue.identifier isEqualToString:@"BodyToDetailSegue"]) {
+        SOSDetailViewController* detailVC =  (SOSDetailViewController*)segue.destinationViewController;
+        NSIndexPath* selectedRowIndexPath = [self.tableView indexPathForSelectedRow];
+        NSInteger selectedRowIndex = [selectedRowIndexPath row];
+        [self.tableView deselectRowAtIndexPath:selectedRowIndexPath animated:YES];
+        detailVC.systemTitle = [self.labels objectAtIndex:selectedRowIndex];
+        detailVC.headerColor = [self.colors objectAtIndex:selectedRowIndex];
+        detailVC.systemIndex = selectedRowIndex;
+        detailVC.delegate = self;
+    }
 }
 
 #pragma mark - Detail View Controller Delegate
